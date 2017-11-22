@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="VaryBerry.Master.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Title -->
+	<title>BlueBerry</title>
+	<link rel="shortcut icon" href="../Image/CNSALogo.ico" />
+
+	<!-- Bootstrap core CSS -->
+	<link href="~/Contents/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Style -->
+	<link href="~/Contents/style.css" rel="stylesheet">
+
+	<asp:ContentPlaceHolder ID="Header" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+		<%--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">--%>
+		<div class="container">
+			<!-- Brand -->
+			<a class="navbar-brand" runat="server" href="~/">
+				<h3><strong>BlueBerry</strong></h3>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<!-- Notice -->
+					<li class="nav-item" style="margin-right: 1rem;">
+						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Notice.aspx'" type="submit">Notice</button>
+					</li>
+					<!-- Guide -->
+					<li class="nav-item" style="margin-right: 1rem;">
+						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Guide.aspx'" type="submit">Guide</button>
+					</li>
+					<!-- Copyright -->
+					<li class="nav-item" style="margin-right: 1rem;">
+						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='DeveloperInfo.aspx'" type="submit">Copyright</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<asp:ContentPlaceHolder ID="Contents" runat="server">
+	</asp:ContentPlaceHolder>
+
+	<!-- Copyright -->
+	<footer class="fixed-bottom navbar-expand navbar-dark bg-primary" style="padding: .5rem 1rem;">
+		<%--<nav class="fixed-bottom navbar-expand navbar-dark bg-dark" style="padding: .5rem 1rem;">--%>
+		<a class="navbar-brand" runat="server" href="~/DevelopmentInfo.aspx">2017 Copyright © Team BlueBerry All Rights Reserved.</a>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../Scripts/bootstrap.bundle.min.js"></script>
+	<!-- JQuery -->
+	<script src="../Scripts/jquery-3.2.1.min.js"></script>
+
+	<asp:ContentPlaceHolder ID="Footer" runat="server">
+	</asp:ContentPlaceHolder>
+</body>
+</html>

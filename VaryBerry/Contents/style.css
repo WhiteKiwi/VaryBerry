@@ -1,0 +1,49 @@
+﻿html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	padding-top: 3.5rem;
+	text-align: center;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.background-image {
+	display: table;
+	height: 100%;
+	width: 100%;
+	background: url("../Image/logo.jpg") no-repeat center center scroll;
+	background-size: cover;
+}
+
+.text-vertical-center {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+	.text-vertical-center h1 {
+		padding: 0;
+		margin: 0;
+		font-size: 4.5em;
+		font-weight: 700;
+	}
+
+.notice {
+	background-color: rgba(0, 0, 0, 0.34);
+	margin-right: 5vw;
+	color: white;
+	text-align: left;
+	padding: 2rem 0.5rem;
+}
