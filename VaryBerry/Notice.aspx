@@ -8,7 +8,7 @@
 		<div style="display: table-cell; vertical-align: middle; background-size: cover; height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.12);">
 			<!-- 좌측 Contents -->
 			<div style="float: left; color: white;">
-				<h1 style="font-size: 4.5em; font-weight: 400; margin-left: 5vw;">BlueBerry is delicious</h1>
+				<h1 style="font-size: 4.5em; font-weight: 600; margin-left: 5vw;">BlueBerry is delicious</h1>
 			</div>
 			<!-- 우측 Contents -->
 			<div class="jumbotron notice" style="float: right;">
