@@ -17,6 +17,9 @@
 		<h3>
 			<a href="https://vuejs.org/v2/guide">Vue.js</a>
 		</h3>
+		<h3>
+			<a href="https://sg2nwvpweb082.shr.prod.sin2.secureserver.net:8443/smb/">Plesk</a>
+		</h3>
 	</div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Footer" runat="server">
