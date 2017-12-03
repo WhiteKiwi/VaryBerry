@@ -67,6 +67,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Vul">
+      <HintPath>..\..\Vul\Vul\bin\Release\Vul.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddNotice.aspx" />
