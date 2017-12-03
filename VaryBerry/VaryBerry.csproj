@@ -81,8 +81,8 @@
     <Content Include="Default.aspx" />
     <Content Include="DeveloperInfo.aspx" />
     <Content Include="Guide.aspx" />
-    <Content Include="Image\CNSALogo.ico" />
-    <Content Include="Image\logo.jpg" />
+    <Content Include="Images\CNSALogo.ico" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Master\Navbar.Master" />
     <Content Include="Contents\bootstrap-grid.css.map" />
     <Content Include="Contents\bootstrap-grid.min.css.map" />
@@ -196,6 +196,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\ext\" />
     <Folder Include="Utility\Files\" />
   </ItemGroup>
   <PropertyGroup>

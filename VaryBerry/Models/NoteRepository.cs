@@ -69,6 +69,7 @@ namespace VaryBerry.Models {
 		/// 페이지에 해당하는 글 목록
 		/// </summary>
 		public List<Note> GetNotesByPage(int page) {
+			// TODO: 없는 페이지 체크
 			try {
 				List<Note> r = new List<Note>();
 
@@ -105,7 +106,7 @@ namespace VaryBerry.Models {
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
 				rdr.Read();
-
+				// TODO: 글이 없을 경우
 				return new Note {
 					Id = (int)rdr[ "Id" ],
 					Title = (string)rdr[ "Title" ],
@@ -128,7 +129,7 @@ namespace VaryBerry.Models {
 			try {
 				string sql = "SELECT FileName FROM" + NotesTable + "WHERE Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
-
+				// TODO: 파일이 없을 경우
 				return (string)cmd.ExecuteScalar();
 			} catch (Exception e) {
 				// TODO: 예외 처리

@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Title -->
 	<title>BlueBerry</title>
-	<link rel="shortcut icon" href="../Image/CNSALogo.ico" />
+	<link rel="shortcut icon" href="../Images/CNSALogo.ico" />
 
 	<!-- Bootstrap core CSS -->
 	<link href="~/Contents/bootstrap.min.css" rel="stylesheet">
