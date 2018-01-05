@@ -23,7 +23,7 @@ hr {
 	display: table;
 	height: 100%;
 	width: 100%;
-	background: url("../Image/logo.jpg") no-repeat center center scroll;
+	background: url("/Images/logo.jpg") no-repeat center center scroll;
 	background-size: cover;
 }
 

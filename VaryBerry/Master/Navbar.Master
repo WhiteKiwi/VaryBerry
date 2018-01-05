@@ -54,7 +54,7 @@
 	<!-- Copyright -->
 	<footer class="fixed-bottom navbar-expand navbar-dark bg-primary" style="padding: .5rem 1rem;">
 		<%--<nav class="fixed-bottom navbar-expand navbar-dark bg-dark" style="padding: .5rem 1rem;">--%>
-		<a class="navbar-brand" runat="server" href="~/DevelopmentInfo.aspx">2017 Copyright © Team BlueBerry All Rights Reserved.</a>
+		<a class="navbar-brand" runat="server" href="~/DeveloperInfo.aspx">2017 Copyright © Team BlueBerry All Rights Reserved.</a>
 	</footer>
 
 	<!-- Bootstrap core JavaScript -->
