@@ -84,12 +84,6 @@
     <Content Include="assets\images\background.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="master\Navbar.Master" />
-    <Content Include="assets\css\bootstrap-grid.css.map" />
-    <Content Include="assets\css\bootstrap-grid.min.css.map" />
-    <Content Include="assets\css\bootstrap-reboot.css.map" />
-    <Content Include="assets\css\bootstrap-reboot.min.css.map" />
-    <Content Include="assets\css\bootstrap.css.map" />
-    <Content Include="assets\css\bootstrap.min.css.map" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -98,12 +92,6 @@
     <Content Include="assets\js\bootstrap.bundle.min.js" />
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
-    <Content Include="assets\js\jquery-3.2.1.slim.min.map" />
-    <Content Include="assets\js\jquery-3.2.1.min.map" />
-    <Content Include="assets\js\bootstrap.bundle.js.map" />
-    <Content Include="assets\js\bootstrap.bundle.min.js.map" />
-    <Content Include="assets\js\bootstrap.js.map" />
-    <Content Include="assets\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,11 +111,8 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
-    <None Include="assets\js\jquery-3.2.1.intellisense.js" />
     <Content Include="assets\js\jquery-3.2.1.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
-    <Content Include="assets\js\jquery-3.2.1.slim.js" />
-    <Content Include="assets\js\jquery-3.2.1.slim.min.js" />
     <Content Include="utility\Download.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
