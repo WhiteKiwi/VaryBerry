@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="VaryBerry.Master.Navbar" %>
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.Master.cs" Inherits="VaryBerry.Master.Navbar" %>
 
 <!DOCTYPE html>
 
@@ -7,12 +7,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Title -->
 	<title>BlueBerry</title>
-	<link rel="shortcut icon" href="../Images/CNSALogo.ico" />
+	<link rel="shortcut icon" href="/assets/images/cnsa-logo.ico" />
 
 	<!-- Bootstrap core CSS -->
-	<link href="~/Contents/bootstrap.min.css" rel="stylesheet">
+	<link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom Style -->
-	<link href="~/Contents/style.css" rel="stylesheet">
+	<link href="~/assets/css/style.css" rel="stylesheet">
 
 	<asp:ContentPlaceHolder ID="Header" runat="server">
 	</asp:ContentPlaceHolder>
@@ -20,9 +20,8 @@
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-		<%--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">--%>
 		<div class="container">
-			<!-- Brand -->
+			<!-- index.aspx -->
 			<a class="navbar-brand" runat="server" href="~/">
 				<h3><strong>BlueBerry</strong></h3>
 			</a>
@@ -31,17 +30,17 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
+					<!-- Calendar -->
+					<li class="nav-item" style="margin-right: 1rem;">
+						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Calendar.aspx'" type="submit">Calendar</button>
+					</li>
+					<!-- Berries -->
+					<li class="nav-item" style="margin-right: 1rem;">
+						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Berries.aspx'" type="submit">Berries</button>
+					</li>
 					<!-- Notice -->
 					<li class="nav-item" style="margin-right: 1rem;">
 						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Notice.aspx'" type="submit">Notice</button>
-					</li>
-					<!-- Guide -->
-					<li class="nav-item" style="margin-right: 1rem;">
-						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='Guide.aspx'" type="submit">Guide</button>
-					</li>
-					<!-- Copyright -->
-					<li class="nav-item" style="margin-right: 1rem;">
-						<button class="btn btn-outline-light my-2 my-sm-0" runat="server" onclick="location.href='DeveloperInfo.aspx'" type="submit">Copyright</button>
 					</li>
 				</ul>
 			</div>
@@ -51,16 +50,10 @@
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
 
-	<!-- Copyright -->
-	<footer class="fixed-bottom navbar-expand navbar-dark bg-primary" style="padding: .5rem 1rem;">
-		<%--<nav class="fixed-bottom navbar-expand navbar-dark bg-dark" style="padding: .5rem 1rem;">--%>
-		<a class="navbar-brand" runat="server" href="~/DeveloperInfo.aspx">2017 Copyright © Team BlueBerry All Rights Reserved.</a>
-	</footer>
-
 	<!-- Bootstrap core JavaScript -->
-	<script src="../Scripts/bootstrap.bundle.min.js"></script>
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
 	<!-- JQuery -->
-	<script src="../Scripts/jquery-3.2.1.min.js"></script>
+	<script src="/assets/js/jquery-3.2.1.min.js"></script>
 
 	<asp:ContentPlaceHolder ID="Footer" runat="server">
 	</asp:ContentPlaceHolder>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Navbar.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="VaryBerry.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="VaryBerry.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
@@ -9,8 +9,8 @@
 			<h1>CNSA Guide for 5th Fresh Students</h1>
 			<h3>From CNSA IT Slaves</h3>
 			<br />
-			<!-- Guide Page Button -->
-			<a href="~/Guide.aspx" runat="server" class="btn btn-outline-light" style="border: 3px solid #f8f9fa;" role="button">View details »</a>
+			<!-- Berries Page Button -->
+			<a href="~/Berries.aspx" runat="server" class="btn btn-outline-light" style="border: 3px solid #f8f9fa;" role="button">View details »</a>
 		</div>
 	</div>
 </asp:Content>

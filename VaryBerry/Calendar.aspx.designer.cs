@@ -7,9 +7,9 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace VaryBerry.Admin {
+namespace VaryBerry {
     
     
-    public partial class InfoForDeveloper {
+    public partial class Calendar {
     }
 }

@@ -16,7 +16,7 @@
     <AssemblyName>VaryBerry</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -70,39 +70,40 @@
     <Reference Include="Vul" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AddNotice.aspx" />
-    <Content Include="Admin\InfoForDeveloper.aspx" />
-    <Content Include="Contents\bootstrap-grid.css" />
-    <Content Include="Contents\bootstrap-grid.min.css" />
-    <Content Include="Contents\bootstrap-reboot.css" />
-    <Content Include="Contents\bootstrap-reboot.min.css" />
-    <Content Include="Contents\bootstrap.css" />
-    <Content Include="Contents\bootstrap.min.css" />
-    <Content Include="Contents\style.css" />
+    <Content Include="assets\css\bootstrap-grid.css" />
+    <Content Include="assets\css\bootstrap-grid.min.css" />
+    <Content Include="assets\css\bootstrap-reboot.css" />
+    <Content Include="assets\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="Calendar.aspx" />
+    <Content Include="DevInfo.aspx" />
+    <Content Include="Berries.aspx" />
+    <Content Include="assets\images\cnsa-logo.ico" />
+    <Content Include="assets\images\background.jpg" />
     <Content Include="Default.aspx" />
-    <Content Include="DeveloperInfo.aspx" />
-    <Content Include="Guide.aspx" />
-    <Content Include="Images\CNSALogo.ico" />
-    <Content Include="Images\logo.jpg" />
-    <Content Include="Master\Navbar.Master" />
-    <Content Include="Contents\bootstrap-grid.css.map" />
-    <Content Include="Contents\bootstrap-grid.min.css.map" />
-    <Content Include="Contents\bootstrap-reboot.css.map" />
-    <Content Include="Contents\bootstrap-reboot.min.css.map" />
-    <Content Include="Contents\bootstrap.css.map" />
-    <Content Include="Contents\bootstrap.min.css.map" />
-    <None Include="packages.config" />
+    <Content Include="master\Navbar.Master" />
+    <Content Include="assets\css\bootstrap-grid.css.map" />
+    <Content Include="assets\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Notice.aspx" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.2.1.min.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="assets\js\bootstrap.bundle.js" />
+    <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.2.1.slim.min.map" />
+    <Content Include="assets\js\jquery-3.2.1.min.map" />
+    <Content Include="assets\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\js\bootstrap.js.map" />
+    <Content Include="assets\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,30 +123,37 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
-    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.2.1.js" />
-    <Content Include="Scripts\jquery-3.2.1.min.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.js" />
-    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
-    <Content Include="Utility\Download.aspx" />
+    <None Include="assets\js\jquery-3.2.1.intellisense.js" />
+    <Content Include="assets\js\jquery-3.2.1.js" />
+    <Content Include="assets\js\jquery-3.2.1.min.js" />
+    <Content Include="assets\js\jquery-3.2.1.slim.js" />
+    <Content Include="assets\js\jquery-3.2.1.slim.min.js" />
+    <Content Include="utility\Download.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddNotice.aspx.cs">
-      <DependentUpon>AddNotice.aspx</DependentUpon>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddNotice.aspx.designer.cs">
-      <DependentUpon>AddNotice.aspx</DependentUpon>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\InfoForDeveloper.aspx.cs">
-      <DependentUpon>InfoForDeveloper.aspx</DependentUpon>
+    <Compile Include="DevInfo.aspx.cs">
+      <DependentUpon>DevInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\InfoForDeveloper.aspx.designer.cs">
-      <DependentUpon>InfoForDeveloper.aspx</DependentUpon>
+    <Compile Include="DevInfo.aspx.designer.cs">
+      <DependentUpon>DevInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Berries.aspx.cs">
+      <DependentUpon>Berries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Berries.aspx.designer.cs">
+      <DependentUpon>Berries.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -154,32 +162,18 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DeveloperInfo.aspx.cs">
-      <DependentUpon>DeveloperInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DeveloperInfo.aspx.designer.cs">
-      <DependentUpon>DeveloperInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Guide.aspx.cs">
-      <DependentUpon>Guide.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Guide.aspx.designer.cs">
-      <DependentUpon>Guide.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Navbar.Master.cs">
+    <Compile Include="master\Navbar.Master.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master\Navbar.Master.designer.cs">
+    <Compile Include="master\Navbar.Master.designer.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
     </Compile>
-    <Compile Include="Models\ContentEncodingType.cs" />
-    <Compile Include="Models\Note.cs" />
-    <Compile Include="Models\NoteComment.cs" />
-    <Compile Include="Models\NoteCommentRepository.cs" />
-    <Compile Include="Models\NoteRepository.cs" />
+    <Compile Include="models\ContentEncodingType.cs" />
+    <Compile Include="models\Note.cs" />
+    <Compile Include="models\NoteComment.cs" />
+    <Compile Include="models\NoteCommentRepository.cs" />
+    <Compile Include="models\NoteRepository.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,21 +182,22 @@
       <DependentUpon>Notice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\BoardLibrary.cs" />
-    <Compile Include="Utility\Download.aspx.cs">
+    <Compile Include="utility\BoardLibrary.cs" />
+    <Compile Include="utility\Download.aspx.cs">
       <DependentUpon>Download.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Utility\Download.aspx.designer.cs">
+    <Compile Include="utility\Download.aspx.designer.cs">
       <DependentUpon>Download.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Utility\FileUtility.cs" />
-    <Compile Include="Utility\HtmlUtility.cs" />
-    <Compile Include="Utility\StringLibrary.cs" />
+    <Compile Include="utility\FileUtility.cs" />
+    <Compile Include="utility\HtmlUtility.cs" />
+    <Compile Include="utility\StringLibrary.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\ext\" />
-    <Folder Include="Utility\Files\" />
+    <Folder Include="admin\" />
+    <Folder Include="assets\images\ext\" />
+    <Folder Include="utility\files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
