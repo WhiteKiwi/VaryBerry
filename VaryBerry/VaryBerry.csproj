@@ -126,6 +126,7 @@
     <Content Include="assets\js\jquery-3.2.1.slim.min.js" />
     <Content Include="assets\js\jquery-3.2.1.slim.min.map" />
     <Content Include="assets\js\jquery-3.2.1.min.map" />
+    <None Include="Properties\PublishProfiles\cnsakiwi.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
