@@ -8,10 +8,10 @@ namespace VaryBerry.Models {
 
 		private readonly string NotesTable = "Notes";
 
-		private readonly int NoteCount = 20;
+		private readonly int NoteCount = 10;
 
 		public NoteRepository() {
-			conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[ "VaryBerry" ].ConnectionString);
+			conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
 			conn.Open();
 		}
 
@@ -66,6 +66,18 @@ namespace VaryBerry.Models {
 		}
 
 		/// <summary>
+		/// 페이지 수 반환
+		/// </summary>
+		public int GetPageCount() {
+			// Read Notes Count
+			string sql = "SELECT count(*) FROM Notes;";
+			MySqlCommand cmd = new MySqlCommand(sql, conn);
+			int n = Convert.ToInt32(cmd.ExecuteScalar());
+
+			return n / 10 + 1;
+		}
+
+		/// <summary>
 		/// 페이지에 해당하는 글 목록
 		/// </summary>
 		public List<Note> GetNotesByPage(int page) {
@@ -79,14 +91,15 @@ namespace VaryBerry.Models {
 				int n = Convert.ToInt32(cmd.ExecuteScalar()) - (page * NoteCount);
 
 				// Read Notes
+				// TODO: LIMIT 뒤에 뭔가 하자가 잇다
 				sql = "SELECT Id, PostDate, Title FROM" + NotesTable + "LIMIT " + (n + 1) + ", " + NoteCount + ";";
 				cmd.CommandText = sql;
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {
 					r.Add(new Note {
-						Id = (int)rdr[ "Id" ],
-						PostDate = (DateTime)rdr[ "PostDate" ],
-						Title = (string)rdr[ "Title" ]
+						Id = (int)rdr["Id"],
+						PostDate = (DateTime)rdr["PostDate"],
+						Title = (string)rdr["Title"]
 					});
 				}
 
@@ -108,13 +121,13 @@ namespace VaryBerry.Models {
 				rdr.Read();
 				// TODO: 글이 없을 경우
 				return new Note {
-					Id = (int)rdr[ "Id" ],
-					Title = (string)rdr[ "Title" ],
-					PostDate = (DateTime)rdr[ "PostDate" ],
-					Content = (string)rdr[ "Content" ],
-					Encoding = (string)rdr[ "Encoding" ],
-					FileName = (string)rdr[ "FileName" ],
-					FileSize = (int)rdr[ "FileSize" ]
+					Id = (int)rdr["Id"],
+					Title = (string)rdr["Title"],
+					PostDate = (DateTime)rdr["PostDate"],
+					Content = (string)rdr["Content"],
+					Encoding = (string)rdr["Encoding"],
+					FileName = (string)rdr["FileName"],
+					FileSize = (int)rdr["FileSize"]
 				};
 			} catch (Exception e) {
 				// TODO: 예외 처리

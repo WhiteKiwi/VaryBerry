@@ -10,7 +10,7 @@ body {
 	text-align: center;
 }
 
-hr {
+.hr-gray {
 	display: block;
 	height: 1px;
 	border: 0;
@@ -19,9 +19,24 @@ hr {
 	padding: 0;
 }
 
+.hr-sky {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #167AF6;
+	margin: 1em 0;
+	padding: 0;
+}
+
 .background-image {
 	display: table;
 	background: url("/assets/images/background.jpg") no-repeat center center scroll;
+	background-size: cover;
+}
+
+.background-image-long {
+	display: table;
+	background: url("/assets/images/background-long.png") no-repeat center center scroll;
 	background-size: cover;
 }
 

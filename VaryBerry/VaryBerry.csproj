@@ -73,7 +73,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Vul" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\style.css" />
@@ -83,6 +82,9 @@
     <Content Include="assets\css\bootstrap-reboot.min.css" />
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\images\background-long.png" />
+    <Content Include="assets\images\left-pointer.png" />
+    <Content Include="assets\images\right-pointer.png" />
     <Content Include="assets\js\bootstrap.bundle.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
     <Content Include="assets\js\bootstrap.js" />
@@ -118,6 +120,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Notice.aspx" />
     <Content Include="Notices.aspx" />
     <None Include="assets\js\jquery-3.2.1.intellisense.js" />
     <Content Include="assets\js\jquery-3.2.1.js" />
@@ -181,6 +184,13 @@
     <Compile Include="models\NoteComment.cs" />
     <Compile Include="models\NoteCommentRepository.cs" />
     <Compile Include="models\NoteRepository.cs" />
+    <Compile Include="Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Notices.aspx.cs">
       <DependentUpon>Notices.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
