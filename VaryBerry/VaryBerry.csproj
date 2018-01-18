@@ -138,6 +138,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Suggestion.aspx" />
     <Content Include="utility\Download.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -179,11 +180,11 @@
     <Compile Include="master\Navbar.Master.designer.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
     </Compile>
-    <Compile Include="models\ContentEncodingType.cs" />
-    <Compile Include="models\Note.cs" />
-    <Compile Include="models\NoteComment.cs" />
-    <Compile Include="models\NoteCommentRepository.cs" />
-    <Compile Include="models\NoteRepository.cs" />
+    <Compile Include="models\Berry.cs" />
+    <Compile Include="models\BerryManager.cs" />
+    <Compile Include="models\Models.cs" />
+    <Compile Include="models\Notice.cs" />
+    <Compile Include="models\NoticeManager.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +200,13 @@
       <DependentUpon>Notices.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suggestion.aspx.cs">
+      <DependentUpon>Suggestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suggestion.aspx.designer.cs">
+      <DependentUpon>Suggestion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="utility\BoardLibrary.cs" />
     <Compile Include="utility\Download.aspx.cs">
       <DependentUpon>Download.aspx</DependentUpon>
