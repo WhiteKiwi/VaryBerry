@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerry.AddNotice" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/master/Navbar-Admin.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerry.AddNotice" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
@@ -22,6 +22,4 @@
 	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
 		<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
 	</footer>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Footer" runat="server">
 </asp:Content>

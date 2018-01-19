@@ -96,5 +96,3 @@
 		</footer>
 	</div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Footer" runat="server">
-</asp:Content>

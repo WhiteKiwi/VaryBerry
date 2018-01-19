@@ -18,5 +18,3 @@
 		<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
 	</footer>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Footer" runat="server">
-</asp:Content>

@@ -5,8 +5,11 @@
 <html>
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 	<!-- Title -->
 	<title>BlueBerry</title>
+
+	<!-- Icon -->
 	<link rel="shortcut icon" href="/assets/images/cnsa-logo.ico" />
 
 	<!-- Bootstrap core CSS -->
@@ -49,13 +52,7 @@
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
 	
-	<!-- JQuery -->
-	<script src="/assets/js/jquery-3.2.1.min.js"></script>
-
 	<!-- Bootstrap core JavaScript -->
 	<script src="/assets/js/bootstrap.min.js"></script>
-
-	<asp:ContentPlaceHolder ID="Footer" runat="server">
-	</asp:ContentPlaceHolder>
 </body>
 </html>

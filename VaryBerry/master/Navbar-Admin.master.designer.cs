@@ -7,10 +7,10 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace VaryBerry.Master {
+namespace VaryBerry.master {
     
     
-    public partial class Navbar {
+    public partial class Navbar_Admin {
         
         /// <summary>
         /// Header 컨트롤입니다.

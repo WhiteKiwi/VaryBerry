@@ -120,7 +120,9 @@ namespace VaryBerry.Models {
 
 				var rdr = cmd.ExecuteReader();
 				rdr.Read();
+
 				// TODO: Notice가 없을 경우
+
 				return new Notice {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],

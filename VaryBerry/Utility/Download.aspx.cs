@@ -7,11 +7,8 @@ namespace VaryBerry.Utility {
 		/*
 		private string fileName = "";
 		private string dir = "";
-
-		private NoteRepository _repository;
-
+		
 		public Download() {
-			_repository = new NoteRepository();
 			dir = Server.MapPath("./Files/");
 		}
 
