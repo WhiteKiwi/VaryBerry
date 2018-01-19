@@ -31,7 +31,7 @@
 					} catch(Exception e) {
 						page = 1;
 					}
-					var noticeList = new VaryBerry.Models.NoticeManager().GetNoticeByPage(page);
+					var noticeList = VaryBerry.Models.NoticeManager.GetNoticeByPage(page);
 
 					foreach (var notice in noticeList) {
 						// Write on Page
@@ -53,7 +53,7 @@
 					<asp:ImageButton runat="server" ImageUrl="/assets/images/left-pointer.png" OnClick="LeftButton_Click" />
 				</span>
 				<%
-					int pageCount = new VaryBerry.Models.NoticeManager().GetPagesCount();
+					int pageCount = VaryBerry.Models.NoticeManager.GetPagesCount();
 					int page;
 					try {
 						page = int.Parse(Request.QueryString["page"]);

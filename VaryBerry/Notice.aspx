@@ -13,7 +13,7 @@
 		<form runat="server">
 			<span class="float-left" style="margin-left: 17px; margin-right: 30px;">제목</span>
 			<span class="float-left" style="width: 30%; text-align: center;">
-				<asp:Label ID="Title" runat="server" /></span>
+				<asp:Label ID="nTitle" runat="server" /></span>
 			<span class="float-right" style="margin-left: 30px; margin-right: 37px;">
 				<asp:Label ID="NoticeAt" runat="server" /></span>
 			<span class="float-right" style="width: 15%; text-align: center;">공지일</span>

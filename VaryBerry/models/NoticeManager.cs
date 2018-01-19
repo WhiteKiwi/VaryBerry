@@ -1,29 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace VaryBerry.Models {
-	public class NoticeManager {
-		private MySqlConnection conn;
-
-		private readonly string NOTICETABLE = "Notices";
-
-		public NoticeManager() {
-			conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
-			conn.Open();
-		}
-
-		~NoticeManager() {
-			conn.Close();
-		}
-
+	public static class NoticeManager {
+		// Table Name
+		private static readonly string NOTICETABLE = "Notices";
+		
 		/// <summary>
 		/// Add Notice
 		/// </summary>
-		public int AddNotice(Notice n) {
+		public static int AddNotice(Notice notice) {
+			MySqlConnection conn = null;
 			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
 				int result = 0;
 
 				// Connect to Database
@@ -31,9 +24,9 @@ namespace VaryBerry.Models {
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// Add Notice Info
-				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = n.Title;
-				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = n.Content;
-				cmd.Parameters.Add("Notice_At", MySqlDbType.VarChar).Value = n.NoticeAt;
+				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = notice.Title;
+				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = notice.Contents;
+				cmd.Parameters.Add("Notice_At", MySqlDbType.VarChar).Value = DateTime.Now;
 
 				result = cmd.ExecuteNonQuery();
 
@@ -41,14 +34,21 @@ namespace VaryBerry.Models {
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
 			}
 		}
 
 		/// <summary>
 		/// Delete Notice
 		/// </summary>
-		public int DeleteNotice(int id) {
+		public static int DeleteNotice(int id) {
+			MySqlConnection conn = null;
 			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
 				int result = 0;
 
 				// Delete Notice
@@ -60,6 +60,8 @@ namespace VaryBerry.Models {
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
 			}
 		}
 
@@ -67,8 +69,13 @@ namespace VaryBerry.Models {
 		/// Get Notices by page
 		/// 목록 렌더링을 위해 제목과 글번호만 반환
 		/// </summary>
-		public List<Notice> GetNoticeByPage(int page) {
+		public static List<Notice> GetNoticeByPage(int page) {
+			MySqlConnection conn = null;
 			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
 				List<Notice> noticeList = new List<Notice>();
 
 				// Get Notices Count
@@ -93,14 +100,21 @@ namespace VaryBerry.Models {
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
 			}
 		}
 
 		/// <summary>
 		/// Get Notice by Id
 		/// </summary>
-		public Notice GetNoticeByID(int id) {
+		public static Notice GetNoticeByID(int id) {
+			MySqlConnection conn = null;
 			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
 				string sql = "SELECT * FROM " + NOTICETABLE + " WHERE Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -110,20 +124,27 @@ namespace VaryBerry.Models {
 				return new Notice {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],
-					Content = (string)rdr["Content"],
+					Contents = (string)rdr["Content"],
 					NoticeAt = (DateTime)rdr["Notice_At"]
 				};
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
 			}
 		}
 
 		/// <summary>
 		/// Get Pages Count
 		/// </summary>
-		public int GetPagesCount() {
+		public static int GetPagesCount() {
+			MySqlConnection conn = null;
 			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
 				// Get Notices Count
 				string sql = "SELECT count(*) FROM " + NOTICETABLE + ";";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -138,6 +159,8 @@ namespace VaryBerry.Models {
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
 			}
 		}
 	}

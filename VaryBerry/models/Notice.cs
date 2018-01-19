@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace VaryBerry.Models {
 	/// <summary>
@@ -18,7 +15,7 @@ namespace VaryBerry.Models {
 
 		[Display(Name = "내용")]
 		[Required(ErrorMessage = "* 내용을 작성해 주세요.")]
-		public string Content { get; set; } // 글 내용
+		public string Contents { get; set; } // 글 내용
 
 		public DateTime NoticeAt { get; set; }  // 공지 날짜
 	}

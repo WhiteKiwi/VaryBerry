@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace VaryBerry {
 	public partial class AddNotice : System.Web.UI.Page {
@@ -12,7 +7,13 @@ namespace VaryBerry {
 		}
 
 		protected void NoticeUpload(object sender, EventArgs e) {
+			// 공지 추가
+			Models.NoticeManager.AddNotice(new Models.Notice {
+				Title = nTitle.Text,
+				Contents = Contents.Text
+			});
 
+			Response.Redirect("/Notices.aspx");
 		}
 	}
 }

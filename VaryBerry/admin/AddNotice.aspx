@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerry.AddNotice" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerry.AddNotice" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
@@ -10,9 +10,11 @@
 	<div style="width: 100%; height: 70%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>공지사항 등록</strong></h3>
 		<hr class="hr-sky" />
-		<br />
 		<form runat="server" style="height: 100%;">
-			<!-- Input Box -->
+			<!-- Title -->
+			<asp:TextBox ID="nTitle" runat="server" Width="100%" />
+
+			<!-- Contents -->
 			<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" />
 			<asp:Button runat="server" CssClass="btn btn-primary float-right" OnClick="NoticeUpload" Text="등록" />
 		</form>

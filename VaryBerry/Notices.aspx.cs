@@ -17,8 +17,7 @@ namespace VaryBerry {
 		}
 
 		protected void RightButton_Click(object sender, ImageClickEventArgs e) {
-			Models.NoticeManager nm = new Models.NoticeManager();
-			if (Request.QueryString["page"] != nm.GetPagesCount().ToString())
+			if (Request.QueryString["page"] != Models.NoticeManager.GetPagesCount().ToString())
 				Response.Redirect("/Notices.aspx?page=" + (int.Parse(Request.QueryString["page"]) + 1));
 		}
 	}
