@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar-Admin.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerryAdmin.AddNotice" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="AddNotice.aspx.cs" Inherits="VaryBerry.AddNotice" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>

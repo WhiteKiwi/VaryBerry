@@ -7,7 +7,7 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace VaryBerryAdmin {
+namespace VaryBerry {
     
     
     public partial class AddNotice {

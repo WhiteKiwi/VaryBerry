@@ -76,12 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\AddNotice.aspx" />
-    <Content Include="admin\Berries.aspx" />
-    <Content Include="admin\Calendar.aspx" />
-    <Content Include="admin\Default.aspx" />
-    <Content Include="admin\DevInfo.aspx" />
-    <Content Include="admin\Notice.aspx" />
-    <Content Include="admin\Notices.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\bootstrap-grid.css" />
     <Content Include="assets\css\bootstrap-grid.min.css" />
@@ -124,7 +118,6 @@
     <Content Include="assets\js\bootstrap.bundle.min.js.map" />
     <Content Include="assets\js\bootstrap.js.map" />
     <Content Include="assets\js\bootstrap.min.js.map" />
-    <Content Include="master\Navbar-Admin.Master" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -160,48 +153,6 @@
     <Compile Include="admin\AddNotice.aspx.designer.cs">
       <DependentUpon>AddNotice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\Berries.aspx.cs">
-      <DependentUpon>Berries.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Berries.aspx.designer.cs">
-      <DependentUpon>Berries.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Calendar.aspx.cs">
-      <DependentUpon>Calendar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Calendar.aspx.designer.cs">
-      <DependentUpon>Calendar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\DevInfo.aspx.cs">
-      <DependentUpon>DevInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\DevInfo.aspx.designer.cs">
-      <DependentUpon>DevInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Notice.aspx.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Notice.aspx.designer.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Notices.aspx.cs">
-      <DependentUpon>Notices.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Notices.aspx.designer.cs">
-      <DependentUpon>Notices.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,13 +180,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="master\Navbar-Admin.Master.cs">
-      <DependentUpon>Navbar-Admin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="master\Navbar-Admin.Master.designer.cs">
-      <DependentUpon>Navbar-Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="master\Navbar.Master.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
