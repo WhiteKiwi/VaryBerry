@@ -3,6 +3,8 @@ using VaryBerry.Models;
 
 namespace VaryBerry.Utility {
 	public partial class Download : System.Web.UI.Page {
+		//TODO: Download code
+		/*
 		private string fileName = "";
 		private string dir = "";
 
@@ -28,6 +30,6 @@ namespace VaryBerry.Utility {
 				Response.WriteFile(dir + fileName);
 				Response.End();
 			}
-		}
+		}*/
 	}
 }

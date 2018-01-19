@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace VaryBerry {
-	public partial class Notices : System.Web.UI.Page {
+namespace VaryBerryAdmin {
+	public partial class AdminNotices : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
 
 		}
@@ -17,7 +13,7 @@ namespace VaryBerry {
 		}
 
 		protected void RightButton_Click(object sender, ImageClickEventArgs e) {
-			Models.NoticeManager nm = new Models.NoticeManager();
+			VaryBerry.Models.NoticeManager nm = new VaryBerry.Models.NoticeManager();
 			if (Request.QueryString["page"] != nm.GetPagesCount().ToString())
 				Response.Redirect("/Notices.aspx?page=" + (int.Parse(Request.QueryString["page"]) + 1));
 		}

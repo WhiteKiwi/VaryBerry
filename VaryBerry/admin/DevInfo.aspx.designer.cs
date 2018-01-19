@@ -7,9 +7,9 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace VaryBerry {
+namespace VaryBerryAdmin {
     
     
-    public partial class Notices {
+    public partial class AdminDevInfo {
     }
 }

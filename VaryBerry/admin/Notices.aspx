@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="Notices.aspx.cs" Inherits="VaryBerry.Notices" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar-Admin.Master" AutoEventWireup="true" CodeBehind="Notices.aspx.cs" Inherits="VaryBerryAdmin.AdminNotices" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
@@ -28,7 +28,7 @@
 					int page;
 					try {
 						page = int.Parse(Request.QueryString["page"]);
-					} catch(Exception e) {
+					} catch (Exception e) {
 						page = 1;
 					}
 					var noticeList = new VaryBerry.Models.NoticeManager().GetNoticeByPage(page);
@@ -37,7 +37,7 @@
 						// Write on Page
 						Response.Write("<div style=\"text-align: center;\">");
 						Response.Write("<span style=\"float: left; margin-left: 20px;\">" + notice.Id + "</span>");
-						Response.Write("<span><a class=\"alert-link\" href=\"/Notice.aspx?id=" + notice.Id + "\">" + notice.Title + "</a></span>");
+						Response.Write("<span><a class=\"alert-link\" href=\"/admin/Notice.aspx?id=" + notice.Id + "\">" + notice.Title + "</a></span>");
 						Response.Write("<span style=\"float: right; margin-right: 20px;\">" + notice.NoticeAt.ToString("yyyy-MM-dd") + "</span>");
 						Response.Write("</div><hr class=\"hr-gray\" />");
 					}
@@ -57,7 +57,7 @@
 					int page;
 					try {
 						page = int.Parse(Request.QueryString["page"]);
-					} catch(Exception e) {
+					} catch (Exception e) {
 						page = 1;
 					}
 
@@ -67,13 +67,13 @@
 						if (pageCount / 10 == page / 10) {
 							for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
 								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								Response.Write("<a href=\"/admin/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						} else {
 							for (int i = 1; i <= 10; i++) {
 								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								Response.Write("<a href=\"/admin/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						}
@@ -81,7 +81,7 @@
 						// 첫 목록
 						for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
 							Response.Write("<span>");
-							Response.Write("<a href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
+							Response.Write("<a href=\"/admin/Notices.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
 					}
@@ -89,6 +89,7 @@
 				<span>
 					<asp:ImageButton runat="server" ImageUrl="/assets/images/right-pointer.png" OnClick="RightButton_Click" />
 				</span>
+				<a href="/admin/AddNotice.aspx" class="btn btn-primary" style="float: right;" role="button">등록</a>
 			</form>
 		</div>
 		<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">

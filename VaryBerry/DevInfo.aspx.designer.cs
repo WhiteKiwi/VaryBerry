@@ -10,6 +10,6 @@
 namespace VaryBerry {
     
     
-    public partial class DeveloperInfo {
+    public partial class DevInfo {
     }
 }

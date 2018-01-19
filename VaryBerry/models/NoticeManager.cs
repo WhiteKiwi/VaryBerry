@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace VaryBerry.models {
+namespace VaryBerry.Models {
 	public class NoticeManager {
 		private MySqlConnection conn;
 
@@ -77,14 +77,15 @@ namespace VaryBerry.models {
 				int noticeCount = Convert.ToInt32(cmd.ExecuteScalar());
 
 				// Get Notices
-				sql = "SELECT Id, Title FROM " + NOTICETABLE + " LIMIT 10 OFFSET " + ((page - 1) * 10) + "';";
+				sql = "SELECT Id, Title, Notice_At FROM " + NOTICETABLE + " ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
 				cmd.CommandText = sql;
 
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {
 					noticeList.Add(new Notice {
 						Id = (int)rdr["Id"],
-						Title = (string)rdr["Title"]
+						Title = (string)rdr["Title"],
+						NoticeAt = (DateTime)rdr["Notice_At"]
 					});
 				}
 
@@ -121,7 +122,7 @@ namespace VaryBerry.models {
 		/// <summary>
 		/// Get Pages Count
 		/// </summary>
-		public int GetPagesCount(int page) {
+		public int GetPagesCount() {
 			try {
 				// Get Notices Count
 				string sql = "SELECT count(*) FROM " + NOTICETABLE + ";";

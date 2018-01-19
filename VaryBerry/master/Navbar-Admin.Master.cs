@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace VaryBerry {
-	public partial class Notice : System.Web.UI.Page {
+namespace VaryBerryAdmin.Master {
+	public partial class Navbar : System.Web.UI.MasterPage {
 		protected void Page_Load(object sender, EventArgs e) {
 
 		}

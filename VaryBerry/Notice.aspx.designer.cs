@@ -10,6 +10,6 @@
 namespace VaryBerry {
     
     
-    public partial class Notice1 {
+    public partial class Notice {
     }
 }

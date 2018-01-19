@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar-Admin.Master.cs" Inherits="VaryBerryAdmin.Master.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Title -->
+	<title>BlueBerry</title>
+	<link rel="shortcut icon" href="/assets/images/cnsa-logo.ico" />
+
+	<!-- Bootstrap core CSS -->
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Style -->
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<asp:ContentPlaceHolder ID="Header" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- index.aspx -->
+		<a class="navbar-brand" href="/admin/">
+			<h3><strong>BlueBerry</strong></h3>
+		</a>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<!-- Calendar -->
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/Calendar.aspx">Calendar</a>
+				</li>
+				<!-- Berries -->
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/Berries.aspx">Berries</a>
+				</li>
+				<!-- Notice -->
+				<li class="nav-item">
+					<a class="nav-link" href="/admin/Notices.aspx">Notices</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<asp:ContentPlaceHolder ID="Contents" runat="server">
+	</asp:ContentPlaceHolder>
+	
+	<!-- JQuery -->
+	<script src="/assets/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="/assets/js/bootstrap.min.js"></script>
+
+	<asp:ContentPlaceHolder ID="Footer" runat="server">
+	</asp:ContentPlaceHolder>
+</body>
+</html>
