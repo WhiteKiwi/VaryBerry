@@ -7,9 +7,10 @@
 	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
 
 	<!-- Notices -->
-	<div style="width: 100%; height: 60%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
+	<div style="width: 100%; height: 70%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>공지사항 등록</strong></h3>
 		<hr class="hr-sky" />
+		<br />
 		<form runat="server" style="height: 100%;">
 			<!-- Input Box -->
 			<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" />
