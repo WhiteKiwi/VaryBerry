@@ -52,7 +52,7 @@ namespace VaryBerry {
 					break;
 			}
 
-			// Berry 추가
+			// 제안 추가
 			Models.BerryProposalManager.AddBerryProposal(new Models.BerryProposal {
 				Title = nTitle.Text,
 				Contents = Contents.Text,

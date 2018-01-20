@@ -18,12 +18,43 @@ namespace VaryBerry {
 		}
 
 		protected void BerryUpload(object sender, EventArgs e) {
+			Models.Classification classification;
+
+			switch (ClassificationList.SelectedValue) {
+				case "행사":
+					classification = Models.Classification.Event;
+					break;
+				case "학교시설":
+					classification = Models.Classification.Facilities;
+					break;
+				case "기숙사":
+					classification = Models.Classification.Dormitory;
+					break;
+				case "학습":
+					classification = Models.Classification.Study;
+					break;
+				case "활동":
+					classification = Models.Classification.Career;
+					break;
+				case "대회":
+					classification = Models.Classification.Contest;
+					break;
+				case "교우관계":
+					classification = Models.Classification.Relationship;
+					break;
+				default:
+					classification = Models.Classification.Study;
+					break;
+			}
+
 			// Berry 추가
 			Models.BerryManager.AddBerry(new Models.Berry {
 				Title = nTitle.Text,
 				Contents = Contents.Text,
-				Classification = (Models.Classification)ClassificationList.SelectedIndex
+				Classification = classification
 			});
+
+			Response.Redirect("/admin/AddBerry.aspx");
 		}
 
 		protected void CountBytes(object sender, EventArgs e) {

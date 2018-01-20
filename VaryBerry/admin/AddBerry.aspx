@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<!-- Berries -->
+	<!-- Berry -->
 	<div style="width: 100%; height: 70%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>Berry 추가</strong></h3>
 		<hr class="hr-sky" />
@@ -47,4 +47,5 @@
 			</div>
 		</form>
 	</div>
+	<br />
 </asp:Content>
