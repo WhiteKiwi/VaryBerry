@@ -91,8 +91,8 @@
 				</span>
 			</form>
 		</div>
-		<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
-			<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
+		<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; text-align: center;">
+			<a href="/DevInfo.aspx" style="color: #C9C9C9;"><h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5></a>
 		</footer>
 	</div>
 </asp:Content>
