@@ -88,8 +88,10 @@
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\images\background-long.png" />
+    <Content Include="assets\images\favicon.png" />
     <Content Include="assets\images\left-pointer.png" />
     <Content Include="assets\images\right-pointer.png" />
+    <Content Include="assets\images\VaryBerry.png" />
     <Content Include="assets\js\bootstrap.bundle.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
     <Content Include="assets\js\bootstrap.js" />

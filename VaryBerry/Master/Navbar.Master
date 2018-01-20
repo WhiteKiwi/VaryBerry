@@ -10,7 +10,7 @@
 	<title>BlueBerry</title>
 
 	<!-- Icon -->
-	<link rel="shortcut icon" href="/assets/images/cnsa-logo.ico" />
+	<link rel="shortcut icon" href="/assets/images/favicon.png" />
 
 	<!-- Bootstrap core CSS -->
 	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
