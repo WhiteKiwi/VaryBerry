@@ -24,14 +24,42 @@
 				bool first = true;
 				foreach (var proposal in proposalList) {
 			%>
-			<div class="carousel-item <%if (first) {
+			<div class="carousel-item <%
+				if (first) {
 					Response.Write("active");
 					first = false;
 				}%>">
 				<div class="container">
 					<div class="carousel-caption text-center" style="color: black;">
 						<!-- 분류 - 제목 -->
-						<h1><% Response.Write(proposal.Title); %></h1>
+						<h1><% 
+								switch (proposal.Classification) {
+									case VaryBerry.Models.Classification.Career:
+										Response.Write(proposal.Title + " - 활동");
+										break;
+									case VaryBerry.Models.Classification.Contest:
+										Response.Write(proposal.Title + " - 대회");
+										break;
+									case VaryBerry.Models.Classification.Dormitory:
+										Response.Write(proposal.Title + " - 기숙사");
+										break;
+									case VaryBerry.Models.Classification.Event:
+										Response.Write(proposal.Title + "- 행사");
+										break;
+									case VaryBerry.Models.Classification.Facilities:
+										Response.Write(proposal.Title + " - 시설");
+										break;
+									case VaryBerry.Models.Classification.Relationship:
+										Response.Write(proposal.Title + " - 관계");
+										break;
+									case VaryBerry.Models.Classification.Study:
+										Response.Write(proposal.Title + " - 학습");
+										break;
+									default:
+										Response.Write(proposal.Title);
+										break;
+								}
+								%></h1>
 						<br />
 
 						<!-- 내용 -->

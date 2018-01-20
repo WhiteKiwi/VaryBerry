@@ -94,6 +94,7 @@
     <Content Include="assets\js\bootstrap.bundle.min.js" />
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="BerryPropose.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="DevInfo.aspx" />
     <Content Include="Berries.aspx" />
@@ -170,6 +171,13 @@
     </Compile>
     <Compile Include="admin\BerryProposals.aspx.designer.cs">
       <DependentUpon>BerryProposals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BerryPropose.aspx.cs">
+      <DependentUpon>BerryPropose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BerryPropose.aspx.designer.cs">
+      <DependentUpon>BerryPropose.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>

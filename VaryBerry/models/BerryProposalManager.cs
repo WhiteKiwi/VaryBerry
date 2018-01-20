@@ -26,7 +26,7 @@ namespace VaryBerry.Models {
 				// Add BerryProposal Info
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = berryProposal.Title;
 				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = berryProposal.Contents;
-				cmd.Parameters.Add("Classification", MySqlDbType.VarChar).Value = berryProposal.Classification;
+				cmd.Parameters.Add("Classification", MySqlDbType.Int64).Value = berryProposal.Classification;
 
 				// Query 실행
 				result = cmd.ExecuteNonQuery();
