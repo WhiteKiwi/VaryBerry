@@ -25,7 +25,7 @@ namespace VaryBerry.Models {
 
 				// Add Berry Info
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = berry.Title;
-				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = berry.Content;
+				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = berry.Contents;
 				cmd.Parameters.Add("Classification", MySqlDbType.VarChar).Value = berry.Classification;
 
 				// Query 실행
@@ -122,7 +122,7 @@ namespace VaryBerry.Models {
 				return new Berry {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],
-					Content = (string)rdr["Content"]
+					Contents = (string)rdr["Content"]
 				};
 			} catch (Exception e) {
 				// TODO: 예외 처리

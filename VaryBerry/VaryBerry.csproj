@@ -75,7 +75,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AddBerry.aspx" />
+    <Content Include="admin\AddEvent.aspx" />
     <Content Include="admin\AddNotice.aspx" />
+    <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\bootstrap-grid.css" />
     <Content Include="assets\css\bootstrap-grid.min.css" />
@@ -139,12 +142,33 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AddBerry.aspx.cs">
+      <DependentUpon>AddBerry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddBerry.aspx.designer.cs">
+      <DependentUpon>AddBerry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddEvent.aspx.cs">
+      <DependentUpon>AddEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddEvent.aspx.designer.cs">
+      <DependentUpon>AddEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\AddNotice.aspx.cs">
       <DependentUpon>AddNotice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\AddNotice.aspx.designer.cs">
       <DependentUpon>AddNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\BerryProposals.aspx.cs">
+      <DependentUpon>BerryProposals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\BerryProposals.aspx.designer.cs">
+      <DependentUpon>BerryProposals.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>

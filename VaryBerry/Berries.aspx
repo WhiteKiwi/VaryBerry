@@ -10,13 +10,25 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">디플로마</a>
+					<a class="nav-link" href="/Berries.aspx?classification=0">행사</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="#">행사</a>
+					<a class="nav-link" href="/Berries.aspx?classification=1">학교시설</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="#">기숙사</a>
+					<a class="nav-link" href="/Berries.aspx?classification=2">기숙사</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=3">학습</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=4">활동</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=5">대회</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=6">교우관계</a>
 				</li>
 			</ul>
 		</div>

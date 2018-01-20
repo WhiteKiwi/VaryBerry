@@ -126,7 +126,7 @@ namespace VaryBerry.Models {
 				return new Notice {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],
-					Contents = (string)rdr["Content"],
+					Contents = (string)rdr["Contents"],
 					NoticeAt = (DateTime)rdr["Notice_At"]
 				};
 			} catch (Exception e) {

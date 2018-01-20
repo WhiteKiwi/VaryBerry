@@ -15,7 +15,7 @@ namespace VaryBerry.Models {
 
 		[Display(Name = "내용")]
 		[Required(ErrorMessage = "* 내용을 작성해 주세요.")]
-		public string Content { get; set; } // Berry 내용
+		public string Contents { get; set; } // Berry 내용
 
 		public Classification Classification { get; set; }	// 분류
 	}

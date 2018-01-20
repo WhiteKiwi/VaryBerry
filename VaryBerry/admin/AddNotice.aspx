@@ -3,9 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<!-- Top-Image -->
-	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
-
 	<!-- Notices -->
 	<div style="width: 100%; height: 70%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>공지사항 등록</strong></h3>
@@ -13,13 +10,20 @@
 		<form runat="server" style="height: 100%;">
 			<!-- Title -->
 			<asp:TextBox ID="nTitle" runat="server" Width="100%" />
+			<br />
 
 			<!-- Contents -->
-			<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" />
+			<asp:ScriptManager ID="BytesCountScriptManager" runat="server"></asp:ScriptManager>
+			<asp:UpdatePanel runat="server" ID="BytesPanel" UpdateMode="Always" style="height: 100%;">
+				<ContentTemplate>
+					<fieldset style="height: 100%;">
+						<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" OnTextChanged="CountBytes" AutoPostBack="true" />
+						<asp:Label runat="server" ID="BytesCount" CssClass="float-left" AutoPostBack="true" />
+					</fieldset>
+				</ContentTemplate>
+			</asp:UpdatePanel>
+			<br />
 			<asp:Button runat="server" CssClass="btn btn-primary float-right" OnClick="NoticeUpload" Text="등록" />
 		</form>
 	</div>
-	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
-		<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
-	</footer>
 </asp:Content>
