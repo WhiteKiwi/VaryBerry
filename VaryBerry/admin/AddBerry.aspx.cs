@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace VaryBerry.admin {
+namespace VaryBerry {
 	public partial class AddBerry : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
 			BytesCount.Text = "0 / 10000 Byte";

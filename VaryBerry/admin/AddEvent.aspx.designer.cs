@@ -7,7 +7,7 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace VaryBerry.admin {
+namespace VaryBerry {
     
     
     public partial class AddEvent {

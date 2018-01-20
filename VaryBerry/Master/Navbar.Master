@@ -52,6 +52,9 @@
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
 	
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+
 	<!-- Bootstrap core JavaScript -->
 	<script src="/assets/js/bootstrap.min.js"></script>
 </body>

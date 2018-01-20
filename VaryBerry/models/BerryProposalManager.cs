@@ -3,14 +3,14 @@ using System;
 using System.Collections.Generic;
 
 namespace VaryBerry.Models {
-	public static class BerryManager {
+	public class BerryProposalManager {
 		// Table Name
-		private static readonly string BERRYTABLE = "Berries";
+		private static readonly string BERRYPROPOSALTABLE = "BerryProposals";
 
 		/// <summary>
-		/// Add Berry
+		/// Add BerryProposal
 		/// </summary>
-		public static int AddBerry(Berry berry) {
+		public static int AddBerryProposal(BerryProposal berryProposal) {
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
@@ -20,13 +20,13 @@ namespace VaryBerry.Models {
 				int result = 0;
 
 				// Connect to Database
-				string sql = "INSERT INTO " + BERRYTABLE + "(Title, Contents, Classification) VALUES (?, ?, ?);";
+				string sql = "INSERT INTO " + BERRYPROPOSALTABLE + "(Title, Contents, Classification) VALUES (?, ?, ?);";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-				// Add Berry Info
-				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = berry.Title;
-				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = berry.Contents;
-				cmd.Parameters.Add("Classification", MySqlDbType.VarChar).Value = berry.Classification;
+				// Add BerryProposal Info
+				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = berryProposal.Title;
+				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = berryProposal.Contents;
+				cmd.Parameters.Add("Classification", MySqlDbType.VarChar).Value = berryProposal.Classification;
 
 				// Query 실행
 				result = cmd.ExecuteNonQuery();
@@ -41,9 +41,9 @@ namespace VaryBerry.Models {
 		}
 
 		/// <summary>
-		/// Delete Berry
+		/// Delete BerryProposal
 		/// </summary>
-		public static int DeleteBerry(int id) {
+		public static int DeleteBerryProposal(int id) {
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
@@ -52,8 +52,8 @@ namespace VaryBerry.Models {
 
 				int result = 0;
 
-				// Delete Berry
-				string sql = "DELETE FROM " + BERRYTABLE + " WHERE Id='" + id + "';";
+				// Delete BerryProposal
+				string sql = "DELETE FROM " + BERRYPROPOSALTABLE + " WHERE Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// Query 실행
@@ -69,30 +69,31 @@ namespace VaryBerry.Models {
 		}
 
 		/// <summary>
-		/// Get Berries by Classification
-		/// 목록 렌더링을 위해 제목과 글번호만 반환
+		/// Get BerryProposals
 		/// </summary>
-		public static List<Berry> GetBerriesByClassification(Classification classification) {
+		public static List<BerryProposal> GetBerryProposals() {
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
 				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
 				conn.Open();
 
-				List<Berry> berryList = new List<Berry>();
+				List<BerryProposal> berryProposalList = new List<BerryProposal>();
 
 				// Get Berries
-				string sql = "SELECT Id, Title FROM " + BERRYTABLE + " WHERE Classification='" + classification + "';";
+				string sql = "SELECT * FROM " + BERRYPROPOSALTABLE + ";";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {
-					berryList.Add(new Berry {
+					berryProposalList.Add(new BerryProposal {
 						Id = (int)rdr["Id"],
-						Title = (string)rdr["Title"]
+						Title = (string)rdr["Title"],
+						Contents = (string)rdr["Contents"],
+						Classification = (Classification)rdr["Classification"]
 					});
 				}
 
-				return berryList;
+				return berryProposalList;
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
@@ -102,24 +103,24 @@ namespace VaryBerry.Models {
 		}
 
 		/// <summary>
-		/// Get Berry by Id
+		/// Get BerryProposal by Id
 		/// </summary>
-		public static Berry GetBerryByID(int id) {
+		public static BerryProposal GetBerryProposalByID(int id) {
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
 				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
 				conn.Open();
 
-				string sql = "SELECT * FROM " + BERRYTABLE + " WHERE Id='" + id + "';";
+				string sql = "SELECT * FROM " + BERRYPROPOSALTABLE + " WHERE Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				var rdr = cmd.ExecuteReader();
 				rdr.Read();
 
-				// TODO: Berry가 없을 경우
+				// TODO: BerryProposal이 없을 경우
 
-				return new Berry {
+				return new BerryProposal {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],
 					Contents = (string)rdr["Contents"]
