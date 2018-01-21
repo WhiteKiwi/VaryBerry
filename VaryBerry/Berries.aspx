@@ -33,4 +33,64 @@
 			</ul>
 		</div>
 	</nav>
+
+	<!-- 사이드바 제목, 크기 설정 -->
+	<div class="col-3 border border-bottom-0 border-secondary text-left" style="padding: 1rem; float: left; height: 100%; overflow: auto;">
+		<%
+			VaryBerry.Models.Classification classification;
+			switch (Request.QueryString["classification"]) {
+				case "0":
+					classification = VaryBerry.Models.Classification.Event;
+					break;
+				case "1":
+					classification = VaryBerry.Models.Classification.Facilities;
+					break;
+				case "2":
+					classification = VaryBerry.Models.Classification.Dormitory;
+					break;
+				case "3":
+					classification = VaryBerry.Models.Classification.Study;
+					break;
+				case "4":
+					classification = VaryBerry.Models.Classification.Career;
+					break;
+				case "5":
+					classification = VaryBerry.Models.Classification.Contest;
+					break;
+				case "6":
+					classification = VaryBerry.Models.Classification.Relationship;
+					break;
+				default:
+					classification = VaryBerry.Models.Classification.Event;
+					break;
+			}
+			var berryList = VaryBerry.Models.BerryManager.GetBerriesByClassification(classification);
+
+			int i = 0;
+			foreach (var berry in berryList) { %>
+
+		<div>
+			<a href="#" class="text-dark">
+				<span style="margin-left: 10px; margin-right: 20px;"><%= ++i %></span><span><%= berry.Title %></span>
+			</a>
+		</div>
+		<hr style="background-color: #95989A;" />
+		<% } %>
+	</div>
+
+	<!-- 본문에 대한 코드 -->
+	<div class=" col-9 container" style="text-align: left; float: left; height: inherit; padding: 2rem; height: inherit; position: relative;">
+		<!-- 제목 -->
+		<br />
+		<h1 style="margin-left: 1rem;">내신을 잘 받기 위해 입학전에 준비해야 할 것</h1>
+		<hr style="border: 1px solid #95989A; background-color: #95989A;" />
+		<div style="width: 100%; margin: 2rem;">
+			<h1>aaaaaa</h1>
+			밥을 잘먹자
+		</div>
+
+		<footer style="margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; position: absolute; bottom: 0px;">
+			<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
+		</footer>
+	</div>
 </asp:Content>

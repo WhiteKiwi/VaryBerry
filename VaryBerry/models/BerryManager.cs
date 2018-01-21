@@ -26,7 +26,35 @@ namespace VaryBerry.Models {
 				// Add Berry Info
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = berry.Title;
 				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = berry.Contents;
-				cmd.Parameters.Add("Classification", MySqlDbType.VarChar).Value = berry.Classification;
+
+				int classificationIndex = 0;
+				switch (berry.Classification) {
+					case Classification.Event:
+						classificationIndex = 0;
+						break;
+					case Classification.Facilities:
+						classificationIndex = 1;
+						break;
+					case Classification.Dormitory:
+						classificationIndex = 2;
+						break;
+					case Classification.Study:
+						classificationIndex = 3;
+						break;
+					case Classification.Career:
+						classificationIndex = 4;
+						break;
+					case Classification.Contest:
+						classificationIndex = 5;
+						break;
+					case Classification.Relationship:
+						classificationIndex = 6;
+						break;
+					default:
+						classificationIndex = 0;
+						break;
+				}
+				cmd.Parameters.Add("Classification", MySqlDbType.Int64).Value = classificationIndex;
 
 				// Query 실행
 				result = cmd.ExecuteNonQuery();
@@ -82,7 +110,34 @@ namespace VaryBerry.Models {
 				List<Berry> berryList = new List<Berry>();
 
 				// Get Berries
-				string sql = "SELECT Id, Title FROM " + BERRYTABLE + " WHERE Classification='" + classification + "';";
+				int classificationIndex = 0;
+				switch (classification) {
+					case Classification.Event:
+						classificationIndex = 0;
+						break;
+					case Classification.Facilities:
+						classificationIndex = 1;
+						break;
+					case Classification.Dormitory:
+						classificationIndex = 2;
+						break;
+					case Classification.Study:
+						classificationIndex = 3;
+						break;
+					case Classification.Career:
+						classificationIndex = 4;
+						break;
+					case Classification.Contest:
+						classificationIndex = 5;
+						break;
+					case Classification.Relationship:
+						classificationIndex = 6;
+						break;
+					default:
+						classificationIndex = 0;
+						break;
+				}
+				string sql = "SELECT Id, Title FROM " + BERRYTABLE + " WHERE Classification='" + classificationIndex + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {

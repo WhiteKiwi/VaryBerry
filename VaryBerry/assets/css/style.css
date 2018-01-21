@@ -59,3 +59,20 @@ body {
 	text-align: left;
 	padding: 2rem 0.5rem;
 }
+
+#cross {
+	background: red;
+	height: 100px;
+	position: relative;
+	width: 20px;
+}
+
+	#cross:after {
+		background: red;
+		content: "";
+		height: 20px;
+		left: -40px;
+		position: absolute;
+		top: 40px;
+		width: 100px;
+	}
