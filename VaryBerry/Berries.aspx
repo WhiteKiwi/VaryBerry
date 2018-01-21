@@ -70,8 +70,8 @@
 			foreach (var berry in berryList) { %>
 
 		<div>
-			<a href="#" class="text-dark">
-				<span style="margin-left: 10px; margin-right: 20px;"><%= ++i %></span><span><%= berry.Title %></span>
+			<a href="/Berries.aspx?classification=<%=Request.QueryString["classification"] != null ? Request.QueryString["classification"] : "0" %>&berry=<%= berry.Id %>" class="text-dark">
+				<span style="margin-left: 10px; margin-right: 20px;"><%= ++i  %></span><span><%= berry.Title %></span>
 			</a>
 		</div>
 		<hr style="background-color: #95989A;" />
@@ -82,11 +82,20 @@
 	<div class=" col-9 container" style="text-align: left; float: left; height: inherit; padding: 2rem; height: inherit; position: relative;">
 		<!-- 제목 -->
 		<br />
-		<h1 style="margin-left: 1rem;">내신을 잘 받기 위해 입학전에 준비해야 할 것</h1>
+		<%
+			int berryId = 1;
+			if (Request.QueryString["berry"] != null) {
+				int.Parse(Request.QueryString["berry"]);
+			} else {
+				berryId = berryList[0].Id;
+			}
+			var requestBerry = VaryBerry.Models.BerryManager.GetBerryByID(berryId);
+			%>
+		<h1 style="margin-left: 1rem;"><%= requestBerry.Title %></h1>
+		
 		<hr style="border: 1px solid #95989A; background-color: #95989A;" />
 		<div style="width: 100%; margin: 2rem;">
-			<h1>aaaaaa</h1>
-			밥을 잘먹자
+			<%= requestBerry.Contents %>
 		</div>
 
 		<footer style="margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; position: absolute; bottom: 0px;">
