@@ -85,7 +85,7 @@
 		<%
 			int berryId = 1;
 			if (Request.QueryString["berry"] != null) {
-				int.Parse(Request.QueryString["berry"]);
+				berryId = int.Parse(Request.QueryString["berry"]);
 			} else {
 				berryId = berryList[0].Id;
 			}
