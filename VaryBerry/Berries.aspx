@@ -90,16 +90,18 @@
 				berryId = berryList[0].Id;
 			}
 			var requestBerry = VaryBerry.Models.BerryManager.GetBerryByID(berryId);
-			%>
+		%>
 		<h1 style="margin-left: 1rem;"><%= requestBerry.Title %></h1>
-		
+
 		<hr style="border: 1px solid #95989A; background-color: #95989A;" />
 		<div style="width: 100%; margin: 2rem;">
 			<%= requestBerry.Contents %>
 		</div>
 
 		<footer style="margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; position: absolute; bottom: 0px;">
-			<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
+			<a href="/DevInfo.aspx" style="color: #C9C9C9;">
+				<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
+			</a>
 		</footer>
 	</div>
 </asp:Content>
