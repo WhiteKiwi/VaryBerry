@@ -10,11 +10,14 @@ namespace VaryBerry {
 			// 분류 목록 추가
 			ClassificationList.Items.Add("행사");
 			ClassificationList.Items.Add("학교시설");
-			ClassificationList.Items.Add("기숙사");
+			ClassificationList.Items.Add("CNSA 용어");
+			ClassificationList.Items.Add("생활");
 			ClassificationList.Items.Add("학습");
 			ClassificationList.Items.Add("활동");
+			ClassificationList.Items.Add("동아리");
+			ClassificationList.Items.Add("1인1기");
+			ClassificationList.Items.Add("단체");
 			ClassificationList.Items.Add("대회");
-			ClassificationList.Items.Add("교우관계");
 		}
 
 		protected void BerryUpload(object sender, EventArgs e) {

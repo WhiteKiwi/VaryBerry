@@ -35,20 +35,29 @@ namespace VaryBerry.Models {
 					case Classification.Facilities:
 						classificationIndex = 1;
 						break;
-					case Classification.Dormitory:
+					case Classification.CNSATerms:
 						classificationIndex = 2;
 						break;
-					case Classification.Study:
+					case Classification.CNSALife:
 						classificationIndex = 3;
 						break;
-					case Classification.Career:
+					case Classification.Study:
 						classificationIndex = 4;
 						break;
-					case Classification.Contest:
+					case Classification.Career:
 						classificationIndex = 5;
 						break;
-					case Classification.Relationship:
+					case Classification.Club:
 						classificationIndex = 6;
+						break;
+					case Classification.OneManOneSkill:
+						classificationIndex = 7;
+						break;
+					case Classification.Group:
+						classificationIndex = 8;
+						break;
+					case Classification.Contest:
+						classificationIndex = 9;
 						break;
 					default:
 						classificationIndex = 0;
@@ -118,20 +127,29 @@ namespace VaryBerry.Models {
 					case Classification.Facilities:
 						classificationIndex = 1;
 						break;
-					case Classification.Dormitory:
+					case Classification.CNSATerms:
 						classificationIndex = 2;
 						break;
-					case Classification.Study:
+					case Classification.CNSALife:
 						classificationIndex = 3;
 						break;
-					case Classification.Career:
+					case Classification.Study:
 						classificationIndex = 4;
 						break;
-					case Classification.Contest:
+					case Classification.Career:
 						classificationIndex = 5;
 						break;
-					case Classification.Relationship:
+					case Classification.Club:
 						classificationIndex = 6;
+						break;
+					case Classification.OneManOneSkill:
+						classificationIndex = 7;
+						break;
+					case Classification.Group:
+						classificationIndex = 8;
+						break;
+					case Classification.Contest:
+						classificationIndex = 9;
 						break;
 					default:
 						classificationIndex = 0;
