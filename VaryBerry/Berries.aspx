@@ -97,7 +97,7 @@
 	</div>
 
 	<!-- 본문에 대한 코드 -->
-	<div class=" col-9 container" style="text-align: left; float: left; height: inherit; padding: 2rem; position: relative;">
+	<div class=" col-9 container" style="text-align: left; float: left; padding: 2rem; position: relative;">
 		<!-- 제목 -->
 		<br />
 		<%
