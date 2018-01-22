@@ -9,8 +9,11 @@ namespace VaryBerry.Models {
 		// 학교시설
 		Facilities,
 
-		// 기숙사
-		Dormitory,
+		// CNSA 용어
+		CNSATerms,
+
+		// 생활
+		CNSALife,
 
 		// 학습
 		Study,
@@ -18,10 +21,16 @@ namespace VaryBerry.Models {
 		// 활동
 		Career,
 
-		// 대회
-		Contest,
+		// 동아리
+		Club,
 
-		// 교우관계
-		Relationship,
+		// 1인1기
+		OneManOneSkill,
+
+		// 단체
+		Group,
+
+		// 대회
+		Contest
 	}
 }

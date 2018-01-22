@@ -16,19 +16,28 @@
 					<a class="nav-link" href="/Berries.aspx?classification=1">학교시설</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=2">기숙사</a>
+					<a class="nav-link" href="/Berries.aspx?classification=2">CNSA 용어</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=3">학습</a>
+					<a class="nav-link" href="/Berries.aspx?classification=3">생활</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=4">활동</a>
+					<a class="nav-link" href="/Berries.aspx?classification=4">학습</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=5">대회</a>
+					<a class="nav-link" href="/Berries.aspx?classification=5">활동</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=6">교우관계</a>
+					<a class="nav-link" href="/Berries.aspx?classification=6">동아리</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=7">1인1기</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=8">단체</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/Berries.aspx?classification=9">대회</a>
 				</li>
 			</ul>
 		</div>
@@ -46,19 +55,28 @@
 					classification = VaryBerry.Models.Classification.Facilities;
 					break;
 				case "2":
-					classification = VaryBerry.Models.Classification.Dormitory;
+					classification = VaryBerry.Models.Classification.CNSATerms;
 					break;
 				case "3":
-					classification = VaryBerry.Models.Classification.Study;
+					classification = VaryBerry.Models.Classification.CNSALife;
 					break;
 				case "4":
-					classification = VaryBerry.Models.Classification.Career;
+					classification = VaryBerry.Models.Classification.Study;
 					break;
 				case "5":
-					classification = VaryBerry.Models.Classification.Contest;
+					classification = VaryBerry.Models.Classification.Career;
 					break;
 				case "6":
-					classification = VaryBerry.Models.Classification.Relationship;
+					classification = VaryBerry.Models.Classification.Club;
+					break;
+				case "7":
+					classification = VaryBerry.Models.Classification.OneManOneSkill;
+					break;
+				case "8":
+					classification = VaryBerry.Models.Classification.Group;
+					break;
+				case "9":
+					classification = VaryBerry.Models.Classification.Contest;
 					break;
 				default:
 					classification = VaryBerry.Models.Classification.Event;

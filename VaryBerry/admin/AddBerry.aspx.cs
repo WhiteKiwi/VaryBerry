@@ -27,8 +27,11 @@ namespace VaryBerry {
 				case "학교시설":
 					classification = Models.Classification.Facilities;
 					break;
-				case "기숙사":
-					classification = Models.Classification.Dormitory;
+				case "CNSA 용어":
+					classification = Models.Classification.CNSATerms;
+					break;
+				case "생활":
+					classification = Models.Classification.CNSALife;
 					break;
 				case "학습":
 					classification = Models.Classification.Study;
@@ -36,14 +39,20 @@ namespace VaryBerry {
 				case "활동":
 					classification = Models.Classification.Career;
 					break;
+				case "동아리":
+					classification = Models.Classification.Club;
+					break;
+				case "1인1기":
+					classification = Models.Classification.OneManOneSkill;
+					break;
+				case "단체":
+					classification = Models.Classification.Group;
+					break;
 				case "대회":
 					classification = Models.Classification.Contest;
 					break;
-				case "교우관계":
-					classification = Models.Classification.Relationship;
-					break;
 				default:
-					classification = Models.Classification.Study;
+					classification = Models.Classification.Event;
 					break;
 			}
 
