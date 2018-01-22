@@ -44,7 +44,7 @@
 	</nav>
 
 	<!-- 사이드바 제목, 크기 설정 -->
-	<div class="col-3 border border-bottom-0 border-secondary text-left" style="padding: 1rem; float: left; height: 100%; overflow: auto;">
+	<div class="col-3 border border-bottom-0 border-secondary text-left" style="padding: 1rem; float: left; overflow: auto;">
 		<%
 			VaryBerry.Models.Classification classification;
 			switch (Request.QueryString["classification"]) {
@@ -97,7 +97,7 @@
 	</div>
 
 	<!-- 본문에 대한 코드 -->
-	<div class=" col-9 container" style="text-align: left; float: left; height: inherit; padding: 2rem; height: inherit; position: relative;">
+	<div class=" col-9 container" style="text-align: left; float: left; height: inherit; padding: 2rem; position: relative;">
 		<!-- 제목 -->
 		<br />
 		<%
