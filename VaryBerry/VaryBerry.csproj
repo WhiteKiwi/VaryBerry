@@ -141,7 +141,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="utility\Download.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -246,21 +245,10 @@
       <DependentUpon>Notices.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="utility\BoardLibrary.cs" />
-    <Compile Include="utility\Download.aspx.cs">
-      <DependentUpon>Download.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="utility\Download.aspx.designer.cs">
-      <DependentUpon>Download.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="utility\FileUtility.cs" />
-    <Compile Include="utility\HtmlUtility.cs" />
-    <Compile Include="utility\StringLibrary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\images\ext\" />
-    <Folder Include="utility\files\" />
+    <Folder Include="files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
