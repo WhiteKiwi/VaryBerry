@@ -25,19 +25,16 @@
 					<a class="nav-link" href="/Berries.aspx?classification=4"><strong>학습</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=5"><strong>활동</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=5"><strong>동아리</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=6"><strong>동아리</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=6"><strong>1인1기</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=7"><strong>1인1기</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=7"><strong>단체</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=8"><strong>단체</strong></a>
-				</li>
-				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=9"><strong>대회</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=8"><strong>대회</strong></a>
 				</li>
 			</ul>
 		</div>
@@ -64,18 +61,15 @@
 					classification = VaryBerry.Models.Classification.Study;
 					break;
 				case "5":
-					classification = VaryBerry.Models.Classification.Career;
-					break;
-				case "6":
 					classification = VaryBerry.Models.Classification.Club;
 					break;
-				case "7":
+				case "6":
 					classification = VaryBerry.Models.Classification.OneManOneSkill;
 					break;
-				case "8":
+				case "7":
 					classification = VaryBerry.Models.Classification.Group;
 					break;
-				case "9":
+				case "8":
 					classification = VaryBerry.Models.Classification.Contest;
 					break;
 				default:

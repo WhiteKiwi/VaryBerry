@@ -132,6 +132,7 @@
     <Content Include="Notice.aspx" />
     <Content Include="Notices.aspx" />
     <None Include="Properties\PublishProfiles\cnsakiwi.com - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\VaryBerry-Vultr.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -18,9 +18,6 @@ namespace VaryBerry.Models {
 		// 학습
 		Study,
 
-		// 활동
-		Career,
-
 		// 동아리
 		Club,
 

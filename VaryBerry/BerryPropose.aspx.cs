@@ -44,9 +44,6 @@ namespace VaryBerry {
 				case "학습":
 					classification = Models.Classification.Study;
 					break;
-				case "활동":
-					classification = Models.Classification.Career;
-					break;
 				case "동아리":
 					classification = Models.Classification.Club;
 					break;

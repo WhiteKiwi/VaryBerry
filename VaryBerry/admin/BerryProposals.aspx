@@ -34,26 +34,32 @@
 						<!-- 분류 - 제목 -->
 						<h1><% 
 								switch (proposal.Classification) {
-									case VaryBerry.Models.Classification.Career:
-										Response.Write(proposal.Title + " - 활동");
-										break;
-									case VaryBerry.Models.Classification.Contest:
-										Response.Write(proposal.Title + " - 대회");
-										break;
-									case VaryBerry.Models.Classification.Dormitory:
-										Response.Write(proposal.Title + " - 기숙사");
-										break;
 									case VaryBerry.Models.Classification.Event:
 										Response.Write(proposal.Title + "- 행사");
 										break;
 									case VaryBerry.Models.Classification.Facilities:
 										Response.Write(proposal.Title + " - 시설");
 										break;
-									case VaryBerry.Models.Classification.Relationship:
-										Response.Write(proposal.Title + " - 관계");
+									case VaryBerry.Models.Classification.CNSATerms:
+										Response.Write(proposal.Title + " - CNSA 용어");
+										break;
+									case VaryBerry.Models.Classification.CNSALife:
+										Response.Write(proposal.Title + " - 생활");
 										break;
 									case VaryBerry.Models.Classification.Study:
 										Response.Write(proposal.Title + " - 학습");
+										break;
+									case VaryBerry.Models.Classification.Club:
+										Response.Write(proposal.Title + " - 동아리");
+										break;
+									case VaryBerry.Models.Classification.OneManOneSkill:
+										Response.Write(proposal.Title + " - 1인1기");
+										break;
+									case VaryBerry.Models.Classification.Group:
+										Response.Write(proposal.Title + " - 단체");
+										break;
+									case VaryBerry.Models.Classification.Contest:
+										Response.Write(proposal.Title + " - 대회");
 										break;
 									default:
 										Response.Write(proposal.Title);
