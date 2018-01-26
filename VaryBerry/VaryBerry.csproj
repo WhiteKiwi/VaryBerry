@@ -48,8 +48,8 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.Configuration.Install" />
@@ -81,27 +81,10 @@
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
-    <Content Include="assets\css\bootstrap-grid.css" />
-    <Content Include="assets\css\bootstrap-grid.min.css" />
-    <Content Include="assets\css\bootstrap-reboot.css" />
-    <Content Include="assets\css\bootstrap-reboot.min.css" />
-    <Content Include="assets\css\bootstrap.css" />
-    <Content Include="assets\css\bootstrap.min.css" />
-    <Content Include="assets\images\background-long.png" />
-    <Content Include="assets\images\favicon.png" />
-    <Content Include="assets\images\left-pointer.png" />
-    <Content Include="assets\images\right-pointer.png" />
-    <Content Include="assets\images\VaryBerry.png" />
-    <Content Include="assets\js\bootstrap.bundle.js" />
-    <Content Include="assets\js\bootstrap.bundle.min.js" />
-    <Content Include="assets\js\bootstrap.js" />
-    <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="BerryPropose.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="DevInfo.aspx" />
     <Content Include="Berries.aspx" />
-    <Content Include="assets\images\cnsa-logo.ico" />
-    <Content Include="assets\images\background.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="docs\MySqlCommand.xml" />
     <Content Include="docs\MySqlCommandBuilder.xml" />
@@ -114,18 +97,9 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
-    <Content Include="master\Navbar.Master" />
-    <Content Include="assets\css\bootstrap-grid.css.map" />
-    <Content Include="assets\css\bootstrap-grid.min.css.map" />
-    <Content Include="assets\css\bootstrap-reboot.css.map" />
-    <Content Include="assets\css\bootstrap-reboot.min.css.map" />
-    <Content Include="assets\css\bootstrap.css.map" />
-    <Content Include="assets\css\bootstrap.min.css.map" />
-    <Content Include="assets\js\bootstrap.bundle.js.map" />
-    <Content Include="assets\js\bootstrap.bundle.min.js.map" />
-    <Content Include="assets\js\bootstrap.js.map" />
-    <Content Include="assets\js\bootstrap.min.js.map" />
+    <Content Include="assets\images\모의고사시간표.png" />
     <Content Include="master\Navbar-Admin.master" />
+    <Content Include="master\Navbar.Master" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -246,10 +220,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\images\ext\" />
-    <Folder Include="files\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

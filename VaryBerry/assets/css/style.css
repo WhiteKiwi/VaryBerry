@@ -30,13 +30,13 @@ body {
 
 .background-image {
 	display: table;
-	background: url("/assets/images/background.jpg") no-repeat center center scroll;
+	background: url("https://imageshack.com/a/img923/8784/Ta0UzF.jpg") no-repeat center center scroll;
 	background-size: cover;
 }
 
 .background-image-long {
 	display: table;
-	background: url("/assets/images/background-long.png") no-repeat center center scroll;
+	background: url("https://imageshack.com/a/img924/7912/IIZgDD.png") no-repeat center center scroll;
 	background-size: cover;
 }
 
