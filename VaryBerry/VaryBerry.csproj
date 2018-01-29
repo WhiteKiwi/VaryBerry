@@ -75,6 +75,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddQuestion.aspx" />
     <Content Include="admin\AddBerry.aspx" />
     <Content Include="admin\AddEvent.aspx" />
     <Content Include="admin\AddNotice.aspx" />
@@ -115,11 +116,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="QaA.aspx" />
+    <Content Include="Question.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQuestion.aspx.cs">
+      <DependentUpon>AddQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddQuestion.aspx.designer.cs">
+      <DependentUpon>AddQuestion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\AddBerry.aspx.cs">
       <DependentUpon>AddBerry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +207,7 @@
     <Compile Include="master\Navbar.Master.designer.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
     </Compile>
+    <Compile Include="models\Answer.cs" />
     <Compile Include="models\Berry.cs" />
     <Compile Include="models\BerryManager.cs" />
     <Compile Include="models\BerryProposal.cs" />
@@ -204,6 +215,8 @@
     <Compile Include="models\Models.cs" />
     <Compile Include="models\Notice.cs" />
     <Compile Include="models\NoticeManager.cs" />
+    <Compile Include="models\QaAManager.cs" />
+    <Compile Include="models\Question.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +232,20 @@
       <DependentUpon>Notices.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QaA.aspx.cs">
+      <DependentUpon>QaA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QaA.aspx.designer.cs">
+      <DependentUpon>QaA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Question.aspx.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Question.aspx.designer.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

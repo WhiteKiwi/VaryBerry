@@ -1,14 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="Notices.aspx.cs" Inherits="VaryBerry.Notices" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Navbar.Master" AutoEventWireup="true" CodeBehind="QaA.aspx.cs" Inherits="VaryBerry.QaA" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<!-- Top-Image -->
-	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
-
-	<!-- Notices -->
+	<!-- Q&A -->
 	<div style="width: 100%; padding-top: 50px; padding-left: 100px; padding-right: 100px; text-align: left;">
-		<h3><strong>공지사항</strong></h3>
+		<h3><strong>Q&A</strong></h3>
 		<!-- Table Head -->
 		<hr class="hr-sky" />
 		<div style="text-align: center;">
@@ -26,28 +23,32 @@
 				} catch (Exception e) {
 					page = 1;
 				}
-				var noticeList = VaryBerry.Models.NoticeManager.GetNoticeByPage(page);
+				var questionList = VaryBerry.Models.QaAManager.GetQuestionsByPage(page);
 
-				foreach (var notice in noticeList) {
+				foreach (var question in questionList) {
 					// Write on Page
 					Response.Write("<div style=\"text-align: center;\">");
-					Response.Write("<span style=\"float: left; margin-left: 20px;\">" + notice.Id + "</span>");
-					Response.Write("<span><a class=\"alert-link\" href=\"/Notice.aspx?id=" + notice.Id + "\">" + notice.Title + "</a></span>");
-					Response.Write("<span style=\"float: right; margin-right: 20px;\">" + notice.NoticeAt.ToString("yyyy-MM-dd") + "</span>");
+					Response.Write("<span style=\"float: left; margin-left: 20px;\">" + question.Id + "</span>");
+					Response.Write("<span><a class=\"alert-link\" href=\"/Question.aspx?id=" + question.Id + "\">" + question.Title + "</a></span>");
+					Response.Write("<span style=\"float: right; margin-right: 20px;\">" + question.QuestionAt.ToString("yyyy-MM-dd") + "</span>");
 					Response.Write("</div><hr class=\"hr-gray\" />");
 				}
 			} catch (Exception e) {
 				Response.Write(e.Message);
 			}
 		%>
+		<div style="width: 100%; text-align: right;">
+			<a href="/AddQuestion.aspx" class="btn btn-primary" role="button">질문 등록</a>
+		</div>
+
 		<!-- Page Link -->
 		<div class="text-center">
 			<form runat="server">
 				<span>
-					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<"  ForeColor="#509BF8"/>
+					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
 				</span>
 				<%
-					int pageCount = VaryBerry.Models.NoticeManager.GetPagesCount();
+					int pageCount = VaryBerry.Models.QaAManager.GetPagesCount();
 					int page;
 					try {
 						page = int.Parse(Request.QueryString["page"]);
@@ -61,13 +62,13 @@
 						if (pageCount / 10 == page / 10) {
 							for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
 								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								Response.Write("<a href=\"/QaA.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						} else {
 							for (int i = 1; i <= 10; i++) {
 								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								Response.Write("<a href=\"/QaA.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						}
@@ -75,13 +76,13 @@
 						// 첫 목록
 						for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
 							Response.Write("<span>");
-							Response.Write("<a href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
+							Response.Write("<a href=\"/QaA.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
 					}
 				%>
 				<span>
-					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">"  ForeColor="#509BF8"/>
+					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
 				</span>
 			</form>
 		</div>

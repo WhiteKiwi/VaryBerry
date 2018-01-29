@@ -33,17 +33,21 @@
 		</a>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<!-- Calendar -->
+				<!-- Notice -->
 				<li class="nav-item">
-					<a class="nav-link" href="/Calendar.aspx">Calendar</a>
+					<a class="nav-link" href="/Notices.aspx">Notices</a>
 				</li>
 				<!-- Berries -->
 				<li class="nav-item">
 					<a class="nav-link" href="/Berries.aspx">Berries</a>
 				</li>
-				<!-- Notice -->
+				<!-- Calendar -->
 				<li class="nav-item">
-					<a class="nav-link" href="/Notices.aspx">Notices</a>
+					<a class="nav-link" href="/Calendar.aspx">Calendar</a>
+				</li>
+				<!-- Q&A -->
+				<li class="nav-item">
+					<a class="nav-link" href="/QaA.aspx">Q&A</a>
 				</li>
 			</ul>
 		</div>

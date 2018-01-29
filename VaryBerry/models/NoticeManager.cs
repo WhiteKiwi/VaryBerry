@@ -25,7 +25,7 @@ namespace VaryBerry.Models {
 
 				// Add Notice Info
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = notice.Title;
-				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = notice.Contents;
+				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = notice.Contents.Replace("\r\n", "<br/>");
 				cmd.Parameters.Add("Notice_At", MySqlDbType.DateTime).Value = DateTime.Now;
 				
 				result = cmd.ExecuteNonQuery();
