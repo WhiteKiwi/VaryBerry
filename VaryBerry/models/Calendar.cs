@@ -11,6 +11,8 @@ namespace VaryBerry.Models {
 
 		public string Title { get; set; }   // 일정 제목
 
+		public int Classification { get; set; }	// 분류 번호
+
 		public int BerryId { get; set; }	// Berry 번호
 	}
 }

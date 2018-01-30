@@ -7,31 +7,25 @@
 	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
 
 	<!-- Calendar -->
-	<div style="float: left; margin: 4% 0 0 0; width: 100%; text-align: left;">
-		<h1 style="padding-left: 7%;">달력</h1>
-		<hr style="border: solid 1px; color: dodgerblue; width: 90%" />
-	</div>
+	<div style="width: 100%; padding-top: 50px; padding-left: 100px; padding-right: 100px; text-align: left;">
+	<h3><strong>일정</strong></h3>
+		<hr class="hr-sky" />
+		<%
+			try {
+				var calendarList = VaryBerry.Models.CalendarManager.GetCalendars();
 
-	<div style="float: left; margin: 0 0 0 0; width: 100%; text-align: left;">		
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>		
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>		
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
-		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
-		</div>
+				foreach (var calendar in calendarList) {
+					// Write on Page
+					Response.Write("<div style=\"text-align: center;\">");
+					Response.Write("<span style=\"float: left; margin-left: 20px;\">" + calendar.EventDate.ToString("yyyy-MM-dd") + "</span>");
+					Response.Write("<span><a class=\"alert-link\" href=\"/Berries.aspx?classification=" + calendar.Classification + "&berry=" + calendar.BerryId + " \">" + calendar.Title + "</a></span>");
+					Response.Write("</div><hr class=\"hr-gray\" />");
+				}
+			} catch (Exception e) {
+				Response.Write(e.Message);
+			}
+		%>
+	</div>
 
 	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
 		<a href="/DevInfo.aspx" style="color: #C9C9C9;">

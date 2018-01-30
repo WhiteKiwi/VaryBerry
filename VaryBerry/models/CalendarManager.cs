@@ -20,13 +20,14 @@ namespace VaryBerry.Models {
 				int result = 0;
 
 				// Connect to Database
-				string sql = "INSERT INTO " + CALENDARTABLE + "(Event_Date, Title, Berry_Id) VALUES (?, ?, ?);";
+				string sql = "INSERT INTO " + CALENDARTABLE + "(Event_Date, Title, Classification, Berry_Id) VALUES (?, ?, ?, ?);";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// Add Calendar Info
 				cmd.Parameters.Add("Event_Date", MySqlDbType.Date).Value = calendar.EventDate;
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = calendar.Title;
-				cmd.Parameters.Add("Berry_Id", MySqlDbType.VarChar).Value = calendar.BerryId;
+				cmd.Parameters.Add("Classification", MySqlDbType.Int64).Value = calendar.Classification;
+				cmd.Parameters.Add("Berry_Id", MySqlDbType.Int64).Value = calendar.BerryId;
 
 				result = cmd.ExecuteNonQuery();
 
@@ -61,6 +62,7 @@ namespace VaryBerry.Models {
 						Id = (int)rdr["Id"],
 						EventDate = (DateTime)rdr["Event_Date"],
 						Title = (string)rdr["Title"],
+						Classification = (int)rdr["Classification"],
 						BerryId = (int)rdr["Berry_Id"]
 					});
 				}
