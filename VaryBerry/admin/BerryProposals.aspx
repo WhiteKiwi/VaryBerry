@@ -35,7 +35,7 @@
 						<h1><% 
 								switch (proposal.Classification) {
 									case VaryBerry.Models.Classification.Event:
-										Response.Write(proposal.Title + "- 행사");
+										Response.Write(proposal.Title + " - 행사");
 										break;
 									case VaryBerry.Models.Classification.Facilities:
 										Response.Write(proposal.Title + " - 시설");

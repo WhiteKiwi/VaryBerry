@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace VaryBerry.Models {
 	public static class BerryManager {
 		// Table Name
-		private static readonly string BERRYTABLE = "Berries";
+		private static readonly string BERRYTABLE = "berries";
 
 		/// <summary>
 		/// Add Berry

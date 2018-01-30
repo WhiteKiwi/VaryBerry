@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.UI.WebControls;
 
 namespace VaryBerry {
 	public partial class BerryProposals : System.Web.UI.Page {
