@@ -9,11 +9,11 @@
 			<h3><strong>Q&A</strong></h3>
 			<hr class="hr-sky" />
 			<span class="float-left" style="margin-left: 17px; margin-right: 30px;">제목</span>
-			<span class="float-left" style="width: 30%; text-align: center;">
+			<span class="float-left" style="text-align: center;">
 				<asp:Label ID="nTitle" runat="server" /></span>
 			<span class="float-right" style="margin-left: 30px; margin-right: 37px;">
 				<asp:Label ID="QuestionAt" runat="server" /></span>
-			<span class="float-right" style="width: 15%; text-align: center;">공지일</span>
+			<span class="float-right" style="text-align: center;">공지일</span>
 			<br />
 			<hr class="hr-gray" />
 			<div style="margin-left: 20px; margin-right: 20px;">

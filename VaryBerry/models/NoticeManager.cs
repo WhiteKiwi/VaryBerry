@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace VaryBerry.Models {
 	public static class NoticeManager {
 		// Table Name
-		private static readonly string NOTICETABLE = "Notices";
+		const string NOTICETABLE = "notices";
 		
 		/// <summary>
 		/// Add Notice

@@ -6,22 +6,32 @@
 	<!-- Top-Image -->
 	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
 
-	<form runat="server" style="padding: 0 10% 0 10%;">
-		<h4 style="text-align: left; margin: 4% 0 0 5%">달력</h4>
-		<br />
-		<br />
-		<asp:Calendar ID="CNSACalendar" runat="server" BorderStyle="Solid" BorderColor="white" CellPadding="30" ShowGridLines="True" Width="100%">
+	<!-- Calendar -->
+	<div style="float: left; margin: 4% 0 0 0; width: 100%; text-align: left;">
+		<h1 style="padding-left: 7%;">달력</h1>
+		<hr style="border: solid 1px; color: dodgerblue; width: 90%" />
+	</div>
 
-			<NextPrevStyle Font-Bold="true" ForeColor="#2E9AFE" Font-Size="XX-Large" Width="10%" HorizontalAlign="Left" />
-			<TitleStyle BackColor="White" ForeColor="Black" Font-Size="X-Large" Height="100%"></TitleStyle>
-			<DayHeaderStyle CssClass="border border-primary border-left-0 border-right-0" />
-			<DayStyle BackColor="white" ForeColor="Black"></DayStyle>
-			<OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
-			<SelectedDayStyle BackColor="LightGray" Font-Bold="True"></SelectedDayStyle>
-			<WeekendDayStyle ForeColor="Red" />
-
-		</asp:Calendar>
-	</form>
+	<div style="float: left; margin: 0 0 0 0; width: 100%; text-align: left;">		
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>		
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>		
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		<span style="padding-left: 7%; width: 10%;">1/1</span><span style="float: right; margin-right: 10%; width: 80%; text-align: center">content</span>
+		<hr style="border: solid 0.5px; color: darkgray; width: 90%" />
+		</div>
 
 	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
 		<a href="/DevInfo.aspx" style="color: #C9C9C9;">

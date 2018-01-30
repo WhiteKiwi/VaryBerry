@@ -212,6 +212,8 @@
     <Compile Include="models\BerryManager.cs" />
     <Compile Include="models\BerryProposal.cs" />
     <Compile Include="models\BerryProposalManager.cs" />
+    <Compile Include="models\Calendar.cs" />
+    <Compile Include="models\CalendarManager.cs" />
     <Compile Include="models\Models.cs" />
     <Compile Include="models\Notice.cs" />
     <Compile Include="models\NoticeManager.cs" />
