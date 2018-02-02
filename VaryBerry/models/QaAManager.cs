@@ -159,7 +159,7 @@ namespace VaryBerry.Models {
 				string sql = "SELECT * FROM " + ANSWERTABLE + " WHERE Question_Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-				// TODO: Answer이 없을 경우
+				// TODO: Answer가 없을 경우
 
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {

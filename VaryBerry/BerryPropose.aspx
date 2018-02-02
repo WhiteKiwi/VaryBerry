@@ -35,7 +35,7 @@
 	</nav>
 
 	<!-- Propose -->
-	<div style="width: 100%; height: 70%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
+	<div style="width: 100%; height: 100%; padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>Berry 제안</strong></h3>
 		<hr class="hr-sky" />
 		<form runat="server" style="height: 100%;">
@@ -79,7 +79,7 @@
 		</form>
 	</div>
 	<br />
-	<footer style="margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; position: absolute; bottom: 0px;">
+	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; color: #C9C9C9; text-align: center;">
 		<a href="/DevInfo.aspx" style="color: #C9C9C9;">
 			<h6>2017 Copyright © Team VaryBerry All Right Reserved.</h6>
 		</a>
