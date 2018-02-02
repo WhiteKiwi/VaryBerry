@@ -7,15 +7,27 @@ namespace VaryBerry {
 		}
 
 		protected void LeftButton_Click(object sender, EventArgs e) {
-			// TODO: page < 1
-			if (Request.QueryString["page"] != "1" && Request.QueryString["page"] != null)
-				Response.Redirect("/QaA.aspx?page=" + (int.Parse(Request.QueryString["page"]) - 1));
+			int page;
+			try {
+				page = int.Parse(Request.QueryString["page"]);
+			} catch (Exception ex) {
+				page = 1;
+			}
+
+			if (page > 1)
+				Response.Redirect("/QaA.aspx?page=" + (page - 1));
 		}
 
 		protected void RightButton_Click(object sender, EventArgs e) {
-			// TODO: max < page
-			if (Request.QueryString["page"] != Models.NoticeManager.GetPagesCount().ToString())
-				Response.Redirect("/QaA.aspx?page=" + (int.Parse(Request.QueryString["page"]) + 1));
+			int page;
+			try {
+				page = int.Parse(Request.QueryString["page"]);
+			} catch (Exception ex) {
+				page = 1;
+			}
+
+			if (page < Models.NoticeManager.GetPagesCount())
+				Response.Redirect("/QaA.aspx?page=" + (page + 1));
 		}
 	}
 }

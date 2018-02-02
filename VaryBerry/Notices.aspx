@@ -11,7 +11,7 @@
 		<h3><strong>공지사항</strong></h3>
 		<!-- Table Head -->
 		<hr class="hr-sky" />
-		<div style="text-align: center;">
+		<div style="text-align: center; margin-top: -12px; margin-bottom: -12px;">
 			<span style="float: left; margin-left: 17px;">번호</span>
 			<span>제목</span>
 			<span style="float: right; margin-right: 37px;">공지일</span>
@@ -87,7 +87,7 @@
 		</div>
 		<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; text-align: center;">
 			<a href="/DevInfo.aspx" style="color: #C9C9C9;">
-				<h5>2017 Copyright © Team VaryBerry All Right Reserved.</h5>
+				<h6>2017 Copyright © Team VaryBerry All Right Reserved.</h6>
 			</a>
 		</footer>
 	</div>

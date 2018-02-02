@@ -29,5 +29,11 @@
 				<asp:Button runat="server" CssClass="btn btn-primary float-right" OnClick="QuestionUpload" Text="등록" />
 			</div>
 		</form>
+
+		<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; text-align: center;">
+			<a href="/DevInfo.aspx" style="color: #C9C9C9;">
+				<h6>2017 Copyright © Team VaryBerry All Right Reserved.</h6>
+			</a>
+		</footer>
 	</div>
 </asp:Content>
