@@ -44,7 +44,9 @@
 		<div class="text-center">
 			<form runat="server">
 				<span>
-					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
+					<strong><b>
+						<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
+					</b></strong>
 				</span>
 				<%
 					int pageCount = VaryBerry.Models.NoticeManager.GetPagesCount();
@@ -79,7 +81,7 @@
 									pageStyle = " class=\"this-page\"";
 									textStyle = " style=\"color: white;\"";
 								}
-								
+
 								Response.Write("<span" + pageStyle + ">");
 								Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
@@ -94,15 +96,17 @@
 								pageStyle = " class=\"this-page\"";
 								textStyle = " style=\"color: white;\"";
 							}
-							
-								Response.Write("<span" + pageStyle + ">");
+
+							Response.Write("<span" + pageStyle + ">");
 							Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
 					}
 				%>
 				<span>
-					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
+					<strong><b>
+						<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
+					</b></strong>
 				</span>
 			</form>
 		</div>

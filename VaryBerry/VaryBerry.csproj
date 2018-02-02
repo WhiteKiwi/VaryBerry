@@ -82,6 +82,11 @@
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\벚꽃제 1.jpg" />
+    <Content Include="assets\images\벚꽃제 3.jpg" />
+    <Content Include="assets\images\선후배상견례 1.jpg" />
+    <Content Include="assets\images\선후배상견례 2.jpg" />
+    <Content Include="assets\images\선후배상견례 3.jpg" />
     <Content Include="assets\images\입학식 1.jpg" />
     <Content Include="assets\images\입학식 2-1.jpg" />
     <Content Include="assets\images\입학식 2-2.jpg" />

@@ -8,7 +8,7 @@
 		<h3><strong>Q&A</strong></h3>
 		<!-- Table Head -->
 		<hr class="hr-sky" />
-		<div style="text-align: center; margin-top: -12px; margin-bottom: -12px;"">
+		<div style="text-align: center; margin-top: -12px; margin-bottom: -12px;">
 			<span style="float: left; margin-left: 17px;">번호</span>
 			<span>제목</span>
 			<span style="float: right; margin-right: 37px;">공지일</span>
@@ -45,7 +45,9 @@
 		<div class="text-center">
 			<form runat="server">
 				<span>
-					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
+					<strong><b>
+						<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
+					</b></strong>
 				</span>
 				<%
 					int pageCount = VaryBerry.Models.QaAManager.GetPagesCount();
@@ -89,21 +91,23 @@
 					} else {
 						// 첫 목록
 						for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
-								string pageStyle = "";
-								string textStyle = "";
-								if (i + page / 10 == page) {
-									pageStyle = " class=\"this-page\"";
-									textStyle = " style=\"color: white;\"";
-								}
+							string pageStyle = "";
+							string textStyle = "";
+							if (i + page / 10 == page) {
+								pageStyle = " class=\"this-page\"";
+								textStyle = " style=\"color: white;\"";
+							}
 
-								Response.Write("<span" + pageStyle + ">");
+							Response.Write("<span" + pageStyle + ">");
 							Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
 					}
 				%>
 				<span>
-					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
+					<strong><b>
+						<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
+					</b></strong>
 				</span>
 			</form>
 		</div>
