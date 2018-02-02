@@ -44,7 +44,7 @@
 		<div class="text-center">
 			<form runat="server">
 				<span>
-					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<"  ForeColor="#509BF8"/>
+					<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
 				</span>
 				<%
 					int pageCount = VaryBerry.Models.NoticeManager.GetPagesCount();
@@ -60,28 +60,49 @@
 						// 요청한 페이지가 마지막 장일경우
 						if (pageCount / 10 == page / 10) {
 							for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
-								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								string pageStyle = "";
+								string textStyle = "";
+								if (i + page / 10 == page) {
+									pageStyle = " class=\"this-page\"";
+									textStyle = " style=\"color: white;\"";
+								}
+
+								Response.Write("<span" + pageStyle + ">");
+								Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						} else {
 							for (int i = 1; i <= 10; i++) {
-								Response.Write("<span>");
-								Response.Write("<a href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+								string pageStyle = "";
+								string textStyle = "";
+								if (i + page / 10 == page) {
+									pageStyle = " class=\"this-page\"";
+									textStyle = " style=\"color: white;\"";
+								}
+								
+								Response.Write("<span" + pageStyle + ">");
+								Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
 						}
 					} else {
 						// 첫 목록
 						for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
-							Response.Write("<span>");
-							Response.Write("<a href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
+							string pageStyle = "";
+							string textStyle = "";
+							if (i + page / 10 == page) {
+								pageStyle = " class=\"this-page\"";
+								textStyle = " style=\"color: white;\"";
+							}
+							
+								Response.Write("<span" + pageStyle + ">");
+							Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
 					}
 				%>
 				<span>
-					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">"  ForeColor="#509BF8"/>
+					<asp:LinkButton runat="server" OnClick="RightButton_Click" Text=">" ForeColor="#509BF8" />
 				</span>
 			</form>
 		</div>
