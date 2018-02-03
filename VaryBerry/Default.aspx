@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<div id="BerryProposalsCarousel" class="carousel slide" data-ride="carousel" style="background-color: #C9C9C9; height: 600px;">
+	<div id="BerryProposalsCarousel" class="carousel slide" data-ride="carousel" style="background-color: #C9C9C9; height: 350px;">
 		<!-- carousel 하단 바 -->
 		<ol class="carousel-indicators">
 			<li data-target="#BerryProposalsCarousel" data-slide-to="0" class="active"></li>
