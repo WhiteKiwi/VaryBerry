@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<div>
-		<img src="https://imageshack.com/a/img923/5575/sncZ3Q.png" style="width: 300px; height: 300px;"  alt="VaryBerry Logo" />
+		<img src="/assets/img/VaryBerry.png" style="width: 300px; height: 300px;"  alt="VaryBerry Logo" />
 		<br />
 
 		<h1 style="font-weight: bold">ABOUT US</h1>

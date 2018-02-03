@@ -80,8 +80,15 @@
     <Content Include="admin\AddEvent.aspx" />
     <Content Include="admin\AddNotice.aspx" />
     <Content Include="admin\BerryProposals.aspx" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\background-long.png" />
+    <Content Include="assets\img\background.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\VaryBerry.png" />
+    <Content Include="assets\js\jquery-3.2.1.slim.min.js" />
     <Content Include="images\벚꽃제 1.jpg" />
     <Content Include="images\벚꽃제 3.jpg" />
     <Content Include="images\선후배상견례 1.jpg" />
@@ -260,9 +267,7 @@
       <DependentUpon>Question.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
