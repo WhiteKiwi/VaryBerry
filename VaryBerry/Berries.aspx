@@ -106,7 +106,7 @@
 		<h1 style="margin-left: 1rem;"><%= requestBerry.Title %></h1>
 
 		<hr style="border: 1px solid #95989A; background-color: #95989A;" />
-		<div style="width: 100%; padding: 2rem;">
+		<div style="width: 100%; padding-top: 1rem; padding-left: 2rem; padding-right: 2rem;">
 			<%= requestBerry.Contents %>
 		</div>
 
