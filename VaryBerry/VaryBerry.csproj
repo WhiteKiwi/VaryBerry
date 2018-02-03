@@ -82,18 +82,18 @@
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
-    <Content Include="assets\images\벚꽃제 1.jpg" />
-    <Content Include="assets\images\벚꽃제 3.jpg" />
-    <Content Include="assets\images\선후배상견례 1.jpg" />
-    <Content Include="assets\images\선후배상견례 2.jpg" />
-    <Content Include="assets\images\선후배상견례 3.jpg" />
-    <Content Include="assets\images\입학식 1.jpg" />
-    <Content Include="assets\images\입학식 2-1.jpg" />
-    <Content Include="assets\images\입학식 2-2.jpg" />
-    <Content Include="assets\images\입학식 2-3.jpg" />
-    <Content Include="assets\images\입학식 3-1.jpg" />
-    <Content Include="assets\images\입학식 3-2.jpg" />
-    <Content Include="assets\images\입학식 3-3.jpg" />
+    <Content Include="images\벚꽃제 1.jpg" />
+    <Content Include="images\벚꽃제 3.jpg" />
+    <Content Include="images\선후배상견례 1.jpg" />
+    <Content Include="images\선후배상견례 2.jpg" />
+    <Content Include="images\선후배상견례 3.jpg" />
+    <Content Include="images\입학식 1.jpg" />
+    <Content Include="images\입학식 2-1.jpg" />
+    <Content Include="images\입학식 2-2.jpg" />
+    <Content Include="images\입학식 2-3.jpg" />
+    <Content Include="images\입학식 3-1.jpg" />
+    <Content Include="images\입학식 3-2.jpg" />
+    <Content Include="images\입학식 3-3.jpg" />
     <Content Include="BerryPropose.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="DevInfo.aspx" />
@@ -110,7 +110,7 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
-    <Content Include="assets\images\모의고사시간표.png" />
+    <Content Include="images\모의고사시간표.png" />
     <Content Include="master\Navbar-Admin.master" />
     <Content Include="master\Navbar.Master" />
     <None Include="packages.config">
@@ -260,7 +260,9 @@
       <DependentUpon>Question.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\img\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
