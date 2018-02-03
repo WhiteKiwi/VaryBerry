@@ -259,8 +259,3 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/VaryBerry/assets/images/모의고사시간표.png
-/VaryBerry/assets/images/입학식 2-1.jpg
-/VaryBerry/assets/images/입학식 1.jpg
-/VaryBerry/assets/images
-/VaryBerry/images
