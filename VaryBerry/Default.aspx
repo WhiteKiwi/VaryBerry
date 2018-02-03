@@ -13,17 +13,17 @@
 		<div class="carousel-inner" style="height: 100%;">
 			<div class="carousel-item carousel-item-next carousel-item-left" style="height: 100%;">
 				<div class="carousel-caption text-center" style="height: 100%; right: 0; left: 0;">
-					<img src="/assets/images/선후배상견례 3.jpg" style="height: auto; max-width: 100%;" />
+					<img src="/images/행사/선후배 상견례/선후배상견례 3.jpg" style="height: auto; max-width: 100%;" />
 				</div>
 			</div>
 
 			<div class="carousel-item active carousel-item-left" style="height: 100%;">
 				<div class="carousel-caption text-center" style="height: 100%; right: 0; left: 0;">
-					<img src="/assets/images/선후배상견례 2.jpg" style="height: auto; max-width: 100%;" />
+					<img src="/images/행사/선후배 상견례/선후배상견례 2.jpg" style="height: auto; max-width: 100%;" />
 				</div>
 			</div>
-
 		</div>
+
 		<a class="carousel-control-prev" href="#BerryProposalsCarousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>

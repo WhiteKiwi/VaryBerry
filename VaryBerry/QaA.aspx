@@ -11,7 +11,7 @@
 		<div style="text-align: center; margin-top: -12px; margin-bottom: -12px;">
 			<span style="float: left; margin-left: 17px;">번호</span>
 			<span>제목</span>
-			<span style="float: right; margin-right: 37px;">공지일</span>
+			<span style="float: right; margin-right: 37px;">게시일</span>
 		</div>
 		<hr class="hr-sky" />
 		<!-- Table Data -->
