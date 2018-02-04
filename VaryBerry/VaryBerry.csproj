@@ -82,9 +82,9 @@
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\img\CNSA_Life.jpg" />
-    <Content Include="assets\img\Event.png" />
-    <Content Include="assets\img\Facilities.png" />
-    <Content Include="assets\img\Organization.png" />
+    <Content Include="assets\img\Event.jpg" />
+    <Content Include="assets\img\Facilities.jpg" />
+    <Content Include="assets\img\Organization.jpg" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
@@ -110,6 +110,9 @@
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="images\단체\오케스트라\오케스트라 2-1.JPG" />
+    <Content Include="images\단체\인재관자치위원회\인재관자치위원회 4-3.jpg" />
+    <Content Include="images\단체\자치법정\자치법정 2-1.jpg" />
+    <Content Include="images\단체\자치법정\자치법정 4-1.jpg" />
     <Content Include="images\대회\수학사탐구대회\수학사탐구대회 2-1.jpg" />
     <Content Include="images\대회\수학사탐구대회\수학사탐구대회 2-2.jpg" />
     <Content Include="images\학습\모의고사\모의고사시간표 2-1.png" />

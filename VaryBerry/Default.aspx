@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<div id="BerryProposalsCarousel" class="carousel slide" data-ride="carousel" style="background-color: #C9C9C9; height: 270px;">
+	<div id="BerryProposalsCarousel" class="carousel slide" data-ride="carousel" style="background-color: #C9C9C9; height: 280px;">
 		<!-- carousel 하단 바 -->
 		<ol class="carousel-indicators">
 			<li data-target="#BerryProposalsCarousel" data-slide-to="0" class="active"></li>
@@ -15,13 +15,13 @@
 		<div class="carousel-inner" style="height: 100%;">
 			<div class="carousel-item active carousel-item-next carousel-item-left" style="height: 100%;">
 				<div class="carousel-caption text-center" style="height: 100%; right: 0; left: 0;">
-					<img src="/assets/img/Event.png" style="height: auto; max-width: 100%;" />
+					<img src="/assets/img/Event.jpg" style="height: auto; max-width: 100%;" />
 				</div>
 			</div>
 			
 			<div class="carousel-item carousel-item-next carousel-item-left" style="height: 100%;">
 				<div class="carousel-caption text-center" style="height: 100%; right: 0; left: 0;">
-					<img src="/assets/img/Facilities.png" style="height: auto; max-width: 100%;" />
+					<img src="/assets/img/Facilities.jpg" style="height: auto; max-width: 100%;" />
 				</div>
 			</div>
 
@@ -33,7 +33,7 @@
 
 			<div class="carousel-item carousel-item-next carousel-item-left" style="height: 100%;">
 				<div class="carousel-caption text-center" style="height: 100%; right: 0; left: 0;">
-					<img src="/assets/img/Organization.png" style="height: auto; max-width: 100%;" />
+					<img src="/assets/img/Organization.jpg" style="height: auto; max-width: 100%;" />
 				</div>
 			</div>
 		</div>
