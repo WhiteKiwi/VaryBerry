@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
+	<!-- Top-Image -->
+	<div class="background-image-long" style="width: 100%; height: 40%;"></div>
+
 	<!-- Q&A -->
 	<div style="width: 100%; padding-top: 50px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>Q&A</strong></h3>
