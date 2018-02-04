@@ -9,26 +9,29 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=0">행사</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=0"><strong>행사</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=1">학교시설</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=1"><strong>학교시설</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=2">기숙사</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=2"><strong>CNSA 용어</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=3">학습</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=3"><strong>생활</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=4">활동</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=4"><strong>학습</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=5">대회</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=5"><strong>동아리</strong></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/Berries.aspx?classification=6">교우관계</a>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=6"><strong>단체</strong></a>
+				</li>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/Berries.aspx?classification=7"><strong>대회</strong></a>
 				</li>
 			</ul>
 		</div>

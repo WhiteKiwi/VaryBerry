@@ -47,14 +47,11 @@ namespace VaryBerry.Models {
 					case Classification.Club:
 						classificationIndex = 5;
 						break;
-					case Classification.OneManOneSkill:
+					case Classification.Group:
 						classificationIndex = 6;
 						break;
-					case Classification.Group:
-						classificationIndex = 7;
-						break;
 					case Classification.Contest:
-						classificationIndex = 8;
+						classificationIndex = 7;
 						break;
 					default:
 						classificationIndex = 0;
@@ -136,14 +133,11 @@ namespace VaryBerry.Models {
 					case Classification.Club:
 						classificationIndex = 5;
 						break;
-					case Classification.OneManOneSkill:
+					case Classification.Group:
 						classificationIndex = 6;
 						break;
-					case Classification.Group:
-						classificationIndex = 7;
-						break;
 					case Classification.Contest:
-						classificationIndex = 8;
+						classificationIndex = 7;
 						break;
 					default:
 						classificationIndex = 0;

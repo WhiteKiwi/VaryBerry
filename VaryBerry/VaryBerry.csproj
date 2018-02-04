@@ -81,6 +81,10 @@
     <Content Include="admin\AddNotice.aspx" />
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\img\CNSA_Life.jpg" />
+    <Content Include="assets\img\Event.png" />
+    <Content Include="assets\img\Facilities.png" />
+    <Content Include="assets\img\Organization.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\css\carousel.css" />
     <Content Include="assets\css\style.css" />
@@ -111,7 +115,11 @@
     <Content Include="images\학습\모의고사\모의고사시간표 2-1.png" />
     <Content Include="images\행사\CNSA 영화제\16영화제1.JPG" />
     <Content Include="images\행사\CNSA 영화제\16영화제2.JPG" />
+    <Content Include="images\행사\CNSAian 업 Road\CNSAian 업 Road.jpg" />
     <Content Include="images\행사\GA\GA 4-1.jpg" />
+    <Content Include="images\행사\Legend Festival\Legend Festival 2-1.jpg" />
+    <Content Include="images\행사\Legend Festival\Legend Festival 2-2.jpg" />
+    <Content Include="images\행사\Legend Festival\Legend Festival.JPG" />
     <Content Include="images\행사\동아리 박람회\동아리 박람회 2-1.JPG" />
     <Content Include="images\행사\동아리 박람회\동아리 박람회 3-1.JPG" />
     <Content Include="images\행사\동아리 박람회\동아리 박람회 3-2.JPG" />
@@ -123,9 +131,10 @@
     <Content Include="images\행사\벚꽃제\벚꽃제 2-1.jpg" />
     <Content Include="images\행사\벚꽃제\벚꽃제 2-2.jpg" />
     <Content Include="images\행사\벚꽃제\벚꽃제 2-3.jpg" />
-    <Content Include="images\행사\선후배 상견례\선후배상견례.jpg" />
-    <Content Include="images\행사\선후배 상견례\선후배상견례 3-1.jpg" />
-    <Content Include="images\행사\선후배 상견례\선후배상견례 3-2.jpg" />
+    <Content Include="images\행사\선후배 상견례\선후배 상견례.jpg" />
+    <Content Include="images\행사\선후배 상견례\선후배 상견례 3-1.jpg" />
+    <Content Include="images\행사\선후배 상견례\선후배 상견례 3-2.jpg" />
+    <Content Include="images\행사\세족식\세족식 2-1.jpg" />
     <Content Include="images\행사\세족식\세족식.jpg" />
     <Content Include="images\행사\수능출정식\수능출정식 2-1.jpg" />
     <Content Include="images\행사\수능출정식\수능출정식 2-2.jpg" />
@@ -245,18 +254,12 @@
     <Compile Include="master\Navbar.Master.designer.cs">
       <DependentUpon>Navbar.Master</DependentUpon>
     </Compile>
-    <Compile Include="models\Answer.cs" />
-    <Compile Include="models\Berry.cs" />
     <Compile Include="models\BerryManager.cs" />
-    <Compile Include="models\BerryProposal.cs" />
     <Compile Include="models\BerryProposalManager.cs" />
-    <Compile Include="models\Calendar.cs" />
     <Compile Include="models\CalendarManager.cs" />
     <Compile Include="models\Models.cs" />
-    <Compile Include="models\Notice.cs" />
     <Compile Include="models\NoticeManager.cs" />
     <Compile Include="models\QaAManager.cs" />
-    <Compile Include="models\Question.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
