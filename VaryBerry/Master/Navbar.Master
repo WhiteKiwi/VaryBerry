@@ -32,7 +32,7 @@
 			<h3><strong>BlueBerry</strong></h3>
 		</a>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<ul class="navbar-nav mr-auto">
 				<!-- Notice -->
 				<li class="nav-item">
 					<a class="nav-link" href="/Notices.aspx">Notices</a>
