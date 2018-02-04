@@ -77,7 +77,7 @@
 	</div>
 
 	<br />
-	<footer class="fixed-bottom text-vertical-center text-white" style="width: 100%; margin-bottom: 0.5em;">
+	<footer class="fixed-bottom text-white" style="width: 100%; margin-bottom: 0.5em;">
 		<a href="/DevInfo.aspx" style="color: #C9C9C9;">
 			<h6>2017 Copyright © Team VaryBerry All Right Reserved.</h6>
 		</a>
