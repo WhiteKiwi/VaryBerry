@@ -83,3 +83,21 @@ body {
 	padding: 3px 9px;
 	margin: 3px 2%;
 }
+
+#BerryProposalsCarousel {
+    height: 270px !important;
+    background-color: #C9C9C9 !important;
+}
+
+.berry-carousel-img {
+    height: 270px !important;
+    max-width:100%;
+}
+
+.berry-carousel-caption {
+    height:inherit !important;
+}
+
+.berry-carousel-item {
+    height: inherit !important;
+}
