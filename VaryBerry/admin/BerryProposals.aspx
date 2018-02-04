@@ -50,7 +50,7 @@
 										Response.Write(proposal.Title + " - 학습");
 										break;
 									case VaryBerry.Models.Classification.Club:
-										Response.Write(proposal.Title + " - 1인1기");
+										Response.Write(proposal.Title + " - 동아리");
 										break;
 									case VaryBerry.Models.Classification.Group:
 										Response.Write(proposal.Title + " - 단체");
