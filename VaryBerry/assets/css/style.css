@@ -72,12 +72,25 @@ body {
 }
 
 #BerryProposalsCarousel {
-    height: 270px !important;
+    height: 200px !important;
     background-color: #C9C9C9 !important;
 }
 
+@media (min-width: 1000px) {
+	#BerryProposalsCarousel {
+		height: 300px !important;
+		background-color: #C9C9C9 !important;
+	}
+}
+
+@media (min-width: 1500px) {
+	#BerryProposalsCarousel {
+		height: 400px !important;
+		background-color: #C9C9C9 !important;
+	}
+}
+
 .berry-carousel-img {
-    height: 270px !important;
     max-width:100%;
 }
 
