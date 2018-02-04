@@ -150,6 +150,16 @@
     <Content Include="images\행사\입학식\입학식 2-5.jpg" />
     <Content Include="images\행사\입학식\입학식 2-6.jpg" />
     <Content Include="images\행사\입학식\입학식 2-7.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 3-1.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 3-2.JPG" />
+    <Content Include="images\행사\체육대회\체육대회 3-3.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 3-4-2.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 3-4-4.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 3-5.JPG" />
+    <Content Include="images\행사\체육대회\체육대회 3-6.JPG" />
+    <Content Include="images\행사\체육대회\체육대회 4-1.jpg" />
+    <Content Include="images\행사\체육대회\체육대회 4-2.jpg" />
+    <Content Include="images\행사\체육대회\체육대회.JPG" />
     <Content Include="master\Navbar-Admin.master" />
     <Content Include="master\Navbar.Master" />
     <None Include="packages.config">
