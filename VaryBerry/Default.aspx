@@ -3,13 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<div id="BerryProposalsCarousel" class="carousel slide" data-ride="carousel">
+	<div id="MainCarousel" class="carousel slide" data-ride="carousel">
 		<!-- carousel 하단 바 -->
 		<ol class="carousel-indicators">
-			<li data-target="#BerryProposalsCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#BerryProposalsCarousel" data-slide-to="1" class=""></li>
-			<li data-target="#BerryProposalsCarousel" data-slide-to="2" class=""></li>
-			<li data-target="#BerryProposalsCarousel" data-slide-to="3" class=""></li>
+			<li data-target="#MainCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#MainCarousel" data-slide-to="1" class=""></li>
+			<li data-target="#MainCarousel" data-slide-to="2" class=""></li>
+			<li data-target="#MainCarousel" data-slide-to="3" class=""></li>
 		</ol>
 		<!-- carousel 내용 -->
 		<div class="carousel-inner" style="height: 100%;">
@@ -30,11 +30,11 @@
 			</div>
 		</div>
 
-		<a class="carousel-control-prev" href="#BerryProposalsCarousel" role="button" data-slide="prev">
+		<a class="carousel-control-prev" href="#MainCarousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="carousel-control-next" href="#BerryProposalsCarousel" role="button" data-slide="next">
+		<a class="carousel-control-next" href="#MainCarousel" role="button" data-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
@@ -56,7 +56,7 @@
 			</p>
 			<p>
 				&nbsp;"BlueBerry"는 2017년을 기준으로 작성되었습니다.
-				지속적으로 관리해 나갈 예정이지만 2018년도 학사일정과 차이가 있을 수 있음을 알려드립니다.
+				지속적으로 관리해 나갈 예정이지만 2018년도와 차이가 있을 수 있음을 알려드립니다.
 				신입생들의 학교 적응에 VaryBerry가 많은 도움이 되었으면 좋겠습니다.
 		</div>
 	</div>

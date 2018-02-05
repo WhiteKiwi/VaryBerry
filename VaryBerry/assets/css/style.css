@@ -71,20 +71,20 @@ body {
 	margin: 3px 2%;
 }
 
-#BerryProposalsCarousel {
-    height: 200px !important;
-    background-color: #C9C9C9 !important;
+#MainCarousel {
+	height: 200px !important;
+	background-color: #C9C9C9 !important;
 }
 
 @media (min-width: 1000px) {
-	#BerryProposalsCarousel {
+	#MainCarousel {
 		height: 300px !important;
 		background-color: #C9C9C9 !important;
 	}
 }
 
 @media (min-width: 1500px) {
-	#BerryProposalsCarousel {
+	#MainCarousel {
 		height: 400px !important;
 		background-color: #C9C9C9 !important;
 	}
