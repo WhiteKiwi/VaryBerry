@@ -29,56 +29,57 @@
 					Response.Write("active");
 					first = false;
 				}%>">
-				<div class="container">
-					<div class="carousel-caption text-center" style="color: black;">
-						<!-- 분류 - 제목 -->
-						<h1><% 
-								switch (proposal.Classification) {
-									case VaryBerry.Models.Classification.Event:
-										Response.Write(proposal.Title + " - 행사");
-										break;
-									case VaryBerry.Models.Classification.Facilities:
-										Response.Write(proposal.Title + " - 시설");
-										break;
-									case VaryBerry.Models.Classification.CNSATerms:
-										Response.Write(proposal.Title + " - CNSA 용어");
-										break;
-									case VaryBerry.Models.Classification.CNSALife:
-										Response.Write(proposal.Title + " - 생활");
-										break;
-									case VaryBerry.Models.Classification.Study:
-										Response.Write(proposal.Title + " - 학습");
-										break;
-									case VaryBerry.Models.Classification.Club:
-										Response.Write(proposal.Title + " - 동아리");
-										break;
-									case VaryBerry.Models.Classification.Group:
-										Response.Write(proposal.Title + " - 단체");
-										break;
-									case VaryBerry.Models.Classification.Contest:
-										Response.Write(proposal.Title + " - 대회");
-										break;
-									default:
-										Response.Write(proposal.Title);
-										break;
-								}
-								%></h1>
-						<br />
+				<div class="carousel-caption text-center" style="color: black;">
+					<!-- 분류 - 제목 -->
+					<h1><% 
+							switch (proposal.Classification) {
+								case VaryBerry.Models.Classification.Event:
+									Response.Write(proposal.Title + " - 행사");
+									break;
+								case VaryBerry.Models.Classification.Facilities:
+									Response.Write(proposal.Title + " - 시설");
+									break;
+								case VaryBerry.Models.Classification.CNSATerms:
+									Response.Write(proposal.Title + " - CNSA 용어");
+									break;
+								case VaryBerry.Models.Classification.CNSALife:
+									Response.Write(proposal.Title + " - 생활");
+									break;
+								case VaryBerry.Models.Classification.Study:
+									Response.Write(proposal.Title + " - 학습");
+									break;
+								case VaryBerry.Models.Classification.Club:
+									Response.Write(proposal.Title + " - 동아리");
+									break;
+								case VaryBerry.Models.Classification.Group:
+									Response.Write(proposal.Title + " - 단체");
+									break;
+								case VaryBerry.Models.Classification.Contest:
+									Response.Write(proposal.Title + " - 대회");
+									break;
+								default:
+									Response.Write(proposal.Title);
+									break;
+							}
+					%></h1>
+					<br />
+					<br />
 
-						<!-- 내용 -->
-						<p><% Response.Write(proposal.Contents); %></p>
-						<br />
-						<br />
-						<br />
-						<br />
-
-						<form method="POST">
-							<input type="hidden" name="DeleteProposalId" value="<%= proposal.Id %>" />
-							<!-- Buttons -->
-							<input class="btn btn-outline-primary" type="submit" value="해결" />
-							<input class="btn btn-outline-danger" type="submit" value="지연" />
-						</form>
+					<!-- 내용 -->
+					<div style="height: 25rem; overflow: auto;">
+						<% Response.Write(proposal.Contents); %>
 					</div>
+					<br />
+					<br />
+					<br />
+					<br />
+
+					<form method="POST">
+						<input type="hidden" name="DeleteProposalId" value="<%= proposal.Id %>" />
+						<!-- Buttons -->
+						<input class="btn btn-outline-primary" type="submit" value="해결" />
+						<input class="btn btn-outline-danger" type="submit" value="지연" />
+					</form>
 				</div>
 			</div>
 			<% } %>
