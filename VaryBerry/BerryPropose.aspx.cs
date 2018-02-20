@@ -59,7 +59,7 @@ namespace VaryBerry {
 			// 제안 추가
 			Models.BerryProposalManager.AddBerryProposal(new Models.BerryProposal {
 				Title = nTitle.Text,
-				Contents = Contents.Text,
+				Contents = Contents.Text.Replace("\r\n", "<br/>"),
 				Classification = classification
 			});
 
