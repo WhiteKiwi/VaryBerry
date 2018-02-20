@@ -33,6 +33,9 @@
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
 					<a class="nav-link" href="/Berries.aspx?classification=7"><strong>대회</strong></a>
 				</li>
+				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
+					<a class="nav-link" href="/BerryPropose.aspx"><strong>Berry 제안</strong></a>
+				</li>
 			</ul>
 		</div>
 	</nav>
