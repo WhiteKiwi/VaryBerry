@@ -24,7 +24,7 @@ namespace VaryBerry {
 			// 답변 추가
 			Models.QaAManager.AddAnswer(new Models.Answer {
 				QuestionId = int.Parse(ID.Value),
-				Contents = Answer.Text
+				Contents = Answer.Text.Replace("\r\n", "<br/>")
 			});
 
 			Response.Redirect("/Question.aspx?id=" + ID.Value);

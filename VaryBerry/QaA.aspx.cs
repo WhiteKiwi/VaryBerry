@@ -26,7 +26,7 @@ namespace VaryBerry {
 				page = 1;
 			}
 
-			if (page < Models.NoticeManager.GetPagesCount())
+			if (page < Models.QaAManager.GetPagesCount())
 				Response.Redirect("/QaA.aspx?page=" + (page + 1));
 		}
 	}

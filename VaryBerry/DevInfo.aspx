@@ -16,9 +16,9 @@
 			<thead>
 				<tr>
 					<th style="width: 20%; color: red">Director</th>
-					<th style="width: 20%; color: mediumpurple">Design</th>
-					<th style="width: 20%; color: blue">Develop</th>
-					<th style="width: 20%; color: blue">Develop</th>
+					<th style="width: 20%; color: mediumpurple">Designer</th>
+					<th style="width: 20%; color: blue">Developer</th>
+					<th style="width: 20%; color: blue">Developer</th>
 					<th style="width: 20%; color: burlywood">Photographer</th>
 				</tr>
 			</thead>

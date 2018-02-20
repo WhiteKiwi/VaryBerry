@@ -13,7 +13,7 @@
 				<asp:Label ID="nTitle" runat="server" /></span>
 			<span class="float-right" style="margin-left: 30px; margin-right: 37px;">
 				<asp:Label ID="QuestionAt" runat="server" /></span>
-			<span class="float-right" style="text-align: center;">공지일</span>
+			<span class="float-right" style="text-align: center;">게시일</span>
 			<br />
 			<hr class="hr-gray" />
 			<div style="margin-left: 20px; margin-right: 20px;">
