@@ -26,6 +26,11 @@
 				} catch (Exception e) {
 					page = 1;
 				}
+
+				int pageCount = VaryBerry.Models.QaAManager.GetPagesCount();
+				if (page > pageCount)
+					page = 1;
+
 				var questionList = VaryBerry.Models.QaAManager.GetQuestionsByPage(page);
 
 				foreach (var question in questionList) {
@@ -65,17 +70,32 @@
 					if (page <= pageCount) {
 						// 요청한 페이지가 마지막 장일경우
 						if (pageCount / 10 == page / 10) {
-							for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
-								string pageStyle = "";
-								string textStyle = "";
-								if (i + page / 10 == page) {
-									pageStyle = " class=\"this-page\"";
-									textStyle = " style=\"color: white;\"";
-								}
+							if (pageCount % 10 != 0) {
+								for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
+									string pageStyle = "";
+									string textStyle = "";
+									if (i + page / 10 == page) {
+										pageStyle = " class=\"this-page\"";
+										textStyle = " style=\"color: white;\"";
+									}
 
-								Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
-								Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
-								Response.Write("</span>");
+									Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+									Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+									Response.Write("</span>");
+								}
+							} else {
+								for (int i = 0; i < 10; i++) {
+									string pageStyle = "";
+									string textStyle = "";
+									if (i + page / 10 == page) {
+										pageStyle = " class=\"this-page\"";
+										textStyle = " style=\"color: white;\"";
+									}
+
+									Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+									Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
+									Response.Write("</span>");
+								}
 							}
 						} else {
 							for (int i = 1; i <= 10; i++) {
@@ -93,10 +113,10 @@
 						}
 					} else {
 						// 첫 목록
-						for (int i = 1; i <= pageCount % 10 && i <= 10; i++) {
+						for (int i = 1; i <= 10; i++) {
 							string pageStyle = "";
 							string textStyle = "";
-							if (i + page / 10 == page) {
+							if (i == 1) {
 								pageStyle = " class=\"this-page\"";
 								textStyle = " style=\"color: white;\"";
 							}
