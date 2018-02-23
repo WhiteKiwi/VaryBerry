@@ -69,7 +69,7 @@
 									textStyle = " style=\"color: white;\"";
 								}
 
-								Response.Write("<span" + pageStyle + ">");
+								Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
 								Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
@@ -82,7 +82,7 @@
 									textStyle = " style=\"color: white;\"";
 								}
 
-								Response.Write("<span" + pageStyle + ">");
+								Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
 								Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + (i + page / 10) + "\">" + (i + page / 10) + "</a>");
 								Response.Write("</span>");
 							}
@@ -97,7 +97,7 @@
 								textStyle = " style=\"color: white;\"";
 							}
 
-							Response.Write("<span" + pageStyle + ">");
+							Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
 							Response.Write("<a" + textStyle + " href=\"/Notices.aspx?page=" + i + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
