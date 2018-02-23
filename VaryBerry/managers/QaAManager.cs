@@ -125,8 +125,25 @@ namespace VaryBerry.Models {
 				int result = 0;
 
 				// Connect to Database
-				string sql = "INSERT INTO " + ANSWERTABLE + "(Question_Id, Contents) VALUES (?, ?);";
+				string sql = "SELECT count(*) FROM " + ANSWERTABLE + " WHERE Question_Id='" + answer.QuestionId + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+				// 답변이 하나도 없을 경우
+				int answerCount = Convert.ToInt32(cmd.ExecuteScalar());
+				if (answerCount == 0) {
+					// 제목 불러오기
+					sql = "SELECT Title FROM questions WHERE Id='" + answer.QuestionId + "';";
+					cmd.CommandText = sql;
+					string title = cmd.ExecuteScalar().ToString();
+
+					// 답변완료 추가해서 제목 저장
+					sql = "UPDATE questions SET Title='<span style=\"font-size: 0.9rem; \">[답변완료]</span> " + title + "' WHERE Id='" + answer.QuestionId + "';";
+					cmd.CommandText = sql;
+					cmd.ExecuteNonQuery();
+				}
+
+				sql = "INSERT INTO " + ANSWERTABLE + "(Question_Id, Contents) VALUES (?, ?);";
+				cmd.CommandText = sql;
 
 				// Add Answer Info
 				cmd.Parameters.Add("Question_Id", MySqlDbType.Int64).Value = answer.QuestionId;
