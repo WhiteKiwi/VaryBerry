@@ -180,11 +180,19 @@ namespace VaryBerry.Models {
 
 				// TODO: Berry가 없을 경우
 
-				return new Berry {
+				Berry result = new Berry {
 					Id = (int)rdr["Id"],
 					Title = (string)rdr["Title"],
 					Contents = (string)rdr["Contents"]
 				};
+				
+				// 조회수 증가
+				sql = "UPDATE " + BERRYTABLE + " SET Views='" + ((int)rdr["Views"] + 1) + "' WHERE Id='" + id + "';";
+				rdr.Close();
+				cmd.CommandText = sql;
+				cmd.ExecuteNonQuery();
+
+				return result;
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);

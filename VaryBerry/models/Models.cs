@@ -40,6 +40,8 @@ namespace VaryBerry.Models {
 		public string Contents { get; set; } // Berry 내용
 
 		public Classification Classification { get; set; }  // 분류
+
+		public int Views { get; set; }	// 조회수
 	}
 
 	/// <summary>
