@@ -53,7 +53,7 @@ namespace VaryBerry.Models {
 				List<Calendar> calendarList = new List<Calendar>();
 
 				// Get Calendars Count
-				string sql = "SELECT * FROM " + CALENDARTABLE + " ORDER BY Event_Date;";
+				string sql = "SELECT * FROM " + CALENDARTABLE + " ORDER BY Event_Date DESC;";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				var rdr = cmd.ExecuteReader();
