@@ -313,9 +313,15 @@
     <Compile Include="managers\BerryManager.cs" />
     <Compile Include="managers\BerryProposalManager.cs" />
     <Compile Include="managers\CalendarManager.cs" />
-    <Compile Include="models\Models.cs" />
+    <Compile Include="models\Answer.cs" />
+    <Compile Include="models\Berry.cs" />
+    <Compile Include="models\BerryProposals.cs" />
+    <Compile Include="models\Calendar.cs" />
+    <Compile Include="models\Classification.cs" />
     <Compile Include="managers\NoticeManager.cs" />
     <Compile Include="managers\QaAManager.cs" />
+    <Compile Include="models\Notice.cs" />
+    <Compile Include="models\Question.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
