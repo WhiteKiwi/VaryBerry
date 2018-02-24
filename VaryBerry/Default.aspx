@@ -45,7 +45,7 @@
 		<h1 style="color: #2865B0;">About BlueBerry</h1>
 		<hr class="hr-sky" />
 		<!-- 페이지 설명 -->
-		<div style="padding: 5px;">
+		<div style="padding-left: 10px; padding-right: 10px;">
 			<p>
 				&nbsp;신입생에게 충남삼성고등학교란 낯설고 익숙하지 않은 장소입니다.
 				중학교와 다른 점이 너무나도 많은 본교에서 신입생 홀로 빠르게 적응하기란 쉽지 않습니다.
@@ -68,7 +68,7 @@
 			var noticesList = VaryBerry.Models.NoticeManager.GetNoticeByPage(1);
 
 			foreach (var notice in noticesList) { %>
-		<div style="padding-left: 10px; padding-right: 10px;">
+		<div style="padding-left: 10px; padding-right: 10px; padding-bottom: 8px;">
 			<span class="float-left"><a href="/Notice.aspx?id=<%= notice.Id %>" style="color: #343434;"><%= notice.Title %></a></span>
 			<span class="float-right"><%= notice.NoticeAt.ToString("yyyy-MM-dd") %></span>
 		</div>
