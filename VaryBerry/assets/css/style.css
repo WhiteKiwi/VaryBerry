@@ -10,6 +10,10 @@ body {
 	text-align: center;
 }
 
+p {
+	color: #343434;
+}
+
 .hr-gray {
 	display: block;
 	height: 1px;
