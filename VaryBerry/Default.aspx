@@ -69,7 +69,7 @@
 
 			foreach (var notice in noticesList) { %>
 		<div style="padding-left: 10px; padding-right: 10px;">
-			<span class="float-left"><a href="/Notice.aspx?id=<%= notice.Id %>"><%= notice.Title %></a></span>
+			<span class="float-left"><a href="/Notice.aspx?id=<%= notice.Id %>" style="color: #343434;"><%= notice.Title %></a></span>
 			<span class="float-right"><%= notice.NoticeAt.ToString("yyyy-MM-dd") %></span>
 		</div>
 		<br />
