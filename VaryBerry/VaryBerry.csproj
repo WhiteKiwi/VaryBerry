@@ -221,6 +221,7 @@
   <ItemGroup>
     <Content Include="QaA.aspx" />
     <Content Include="Question.aspx" />
+    <Content Include="robot.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
