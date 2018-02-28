@@ -19,7 +19,7 @@
 						// Write on Page
 						Response.Write("<div style=\"text-align: center;\">");
 						Response.Write("<span style=\"float: left; margin-left: 20px;\">" + calendar.EventDate.ToString("yyyy-MM-dd") + "</span>");
-						Response.Write("<span><a class=\"alert-link\" href=\"/Berries.aspx?classification=" + calendar.Classification + "&berry=" + calendar.BerryId + " \">" + calendar.Title + "</a></span>");
+						Response.Write("<span class=\"contents-list\"><a class=\"alert-link\" href=\"/Berries.aspx?classification=" + calendar.Classification + "&berry=" + calendar.BerryId + " \">" + calendar.Title + "</a></span>");
 						Response.Write("</div><hr class=\"hr-gray\" />");
 					}
 				} catch (Exception e) {

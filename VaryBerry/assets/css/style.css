@@ -10,7 +10,11 @@ body {
 	text-align: center;
 }
 
-p {
+p, span {
+	color: #343434;
+}
+
+.contents-list > a {
 	color: #343434;
 }
 

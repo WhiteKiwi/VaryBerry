@@ -37,7 +37,7 @@
 					// Write on Page
 					Response.Write("<div style=\"text-align: center;\">");
 					Response.Write("<span style=\"float: left; margin-left: 20px;\">" + question.Id + "</span>");
-					Response.Write("<span><a class=\"alert-link\" href=\"/Question.aspx?id=" + question.Id + "\">" + question.Title + "</a></span>");
+					Response.Write("<span class=\"contents-list\"><a class=\"alert-link\" href=\"/Question.aspx?id=" + question.Id + "\">" + question.Title + "</a></span>");
 					Response.Write("<span style=\"float: right; margin-right: 20px;\">" + question.QuestionAt.ToString("yyyy-MM-dd") + "</span>");
 					Response.Write("</div><hr class=\"hr-gray\" />");
 				}

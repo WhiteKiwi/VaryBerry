@@ -32,7 +32,7 @@
 					// Write on Page
 					Response.Write("<div style=\"text-align: center;\">");
 					Response.Write("<span style=\"float: left; margin-left: 20px;\">" + notice.Id + "</span>");
-					Response.Write("<span><a class=\"alert-link\" href=\"/Notice.aspx?id=" + notice.Id + "\">" + notice.Title + "</a></span>");
+					Response.Write("<span class=\"contents-list\"><a class=\"alert-link\" href=\"/Notice.aspx?id=" + notice.Id + "\">" + notice.Title + "</a></span>");
 					Response.Write("<span style=\"float: right; margin-right: 20px;\">" + notice.NoticeAt.ToString("yyyy-MM-dd") + "</span>");
 					Response.Write("</div><hr class=\"hr-gray\" />");
 				}
