@@ -19,7 +19,7 @@ namespace VaryBerry {
 			MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 			// Add Apply Info
-			cmd.Parameters.Add("StudentNumber", MySqlDbType.Int32).Value = studentNumber.Text;
+			cmd.Parameters.Add("StudentNumber", MySqlDbType.VarChar).Value = studentNumber.Text + " : " + role.Text;
 			cmd.Parameters.Add("Contents1", MySqlDbType.VarChar).Value = Contents1.Text.Trim();
 			cmd.Parameters.Add("Contents2", MySqlDbType.VarChar).Value = Contents2.Text.Trim();
 

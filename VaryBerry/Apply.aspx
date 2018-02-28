@@ -13,6 +13,10 @@
 				<span class="float-left"><asp:TextBox ID="studentNumber" runat="server" /></span>
 				<br />
 				<br />
+				<div class="float-left" style="margin-right: 20px;"><h5>디자이너/개발자/사진</h5></div>
+				<span class="float-left"><asp:TextBox ID="role" runat="server" /></span>
+				<br />
+				<br />
 				<br />
 				<h5 style="margin-bottom: 15px;">Q1. VaryBerry가 본인에게 어떤 도움이 될 것이라고 생각하시나요?</h5>
 				<asp:TextBox ID="Contents1" runat="server" TextMode="MultiLine" Width="100%" Rows="10" />
