@@ -80,6 +80,7 @@
     <Content Include="admin\AddEvent.aspx" />
     <Content Include="admin\AddNotice.aspx" />
     <Content Include="admin\BerryProposals.aspx" />
+    <Content Include="admin\Views.aspx" />
     <Content Include="Apply.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\img\CNSA_Life.jpg" />
@@ -262,6 +263,13 @@
     </Compile>
     <Compile Include="admin\BerryProposals.aspx.designer.cs">
       <DependentUpon>BerryProposals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Views.aspx.cs">
+      <DependentUpon>Views.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Views.aspx.designer.cs">
+      <DependentUpon>Views.aspx</DependentUpon>
     </Compile>
     <Compile Include="Apply.aspx.cs">
       <DependentUpon>Apply.aspx</DependentUpon>
