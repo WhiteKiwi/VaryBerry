@@ -11,6 +11,10 @@ namespace VaryBerry.Models {
 		/// Add BerryProposal
 		/// </summary>
 		public static int AddBerryProposal(BerryProposal berryProposal) {
+			// 내용이 비어 있을 경우 종료
+			if (String.IsNullOrEmpty(berryProposal.Title.Trim()) || String.IsNullOrEmpty(berryProposal.Contents.Trim()))
+				return -1;
+
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
