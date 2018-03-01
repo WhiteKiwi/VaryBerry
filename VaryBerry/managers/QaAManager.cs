@@ -116,6 +116,10 @@ namespace VaryBerry.Models {
 		/// Add Answer
 		/// </summary>
 		public static int AddAnswer(Answer answer) {
+			// 내용이 비어 있을 경우 종료
+			if (String.IsNullOrEmpty(answer.Contents.Trim()))
+				return -1;
+
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
