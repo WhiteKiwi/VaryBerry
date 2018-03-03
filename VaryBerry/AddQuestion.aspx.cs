@@ -7,6 +7,8 @@ namespace VaryBerry {
 		}
 		
 		protected void QuestionUpload(object sender, EventArgs e) {
+			QuestionButton.Enabled = false;
+
 			// 질문 등록
 			Models.QaAManager.AddQuestion(new Models.Question {
 				Title = nTitle.Text,

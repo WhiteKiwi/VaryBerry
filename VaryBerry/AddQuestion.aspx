@@ -48,7 +48,7 @@
 
 							<br />
 							<br />
-							<asp:Button runat="server" CssClass="btn btn-primary float-right" OnClick="QuestionUpload" Text="등록" />
+							<asp:Button ID="QuestionButton" runat="server" CssClass="btn btn-primary float-right" OnClick="QuestionUpload" Text="등록" />
 						</div>
 					</div>
 				</form>
