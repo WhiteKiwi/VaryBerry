@@ -58,6 +58,7 @@ namespace VaryBerry {
 				cmd.ExecuteNonQuery();
 
 			}
+
 			Response.Redirect("/Apply.aspx");
 		}
 

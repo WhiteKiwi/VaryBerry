@@ -29,7 +29,7 @@
 
 		<div style="height: 100px; padding-left: 100px; padding-right: 100px;">
 			<asp:TextBox ID="Answer" runat="server" TextMode="MultiLine" Height="100%" Width="90%" CssClass="float-left" />
-			<asp:Button runat="server" CssClass="btn btn-primary" OnClick="AddAnswer" Width="9%" Height="100%" Text="등록" />
+			<asp:Button ID="AnswerButton" runat="server" CssClass="btn btn-primary" OnClick="AddAnswer" Width="9%" Height="100%" Text="등록" />
 		</div>
 		<asp:HiddenField ID="ID" runat="server" Value="1" />
 	</form>

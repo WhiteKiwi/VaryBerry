@@ -21,13 +21,17 @@ namespace VaryBerry {
 		}
 
 		protected void AddAnswer(object sender, EventArgs e) {
-			// 답변 추가
-			Models.QaAManager.AddAnswer(new Models.Answer {
-				QuestionId = int.Parse(ID.Value),
-				Contents = Answer.Text.Replace("\r\n", "<br/>")
-			});
+			if (Answer.Text.Split("\n".ToCharArray())[0].Contains("안녕하세요 VaryBerry")) {
+				// 답변 추가
+				Models.QaAManager.AddAnswer(new Models.Answer {
+					QuestionId = int.Parse(ID.Value),
+					Contents = Answer.Text.Replace("\r\n", "<br/>")
+				});
 
-			Response.Redirect("/Question.aspx?id=" + ID.Value);
+				Response.Redirect("/Question.aspx?id=" + ID.Value);
+			} else {
+				AnswerButton.Text = "관리자만 답변을 달 수 있습니다.";
+			}
 		}
 	}
 }
