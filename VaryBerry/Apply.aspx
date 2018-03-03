@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
-	<!-- Notice -->
+	<!-- Apply -->
 	<div style="padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>VaryBerry 지원</strong></h3>
 		<hr class="hr-sky" />

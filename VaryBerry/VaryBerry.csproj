@@ -224,6 +224,7 @@
     <Content Include="QaA.aspx" />
     <Content Include="Question.aspx" />
     <Content Include="robot.txt" />
+    <Content Include="SlaveApply.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -367,6 +368,13 @@
     </Compile>
     <Compile Include="Question.aspx.designer.cs">
       <DependentUpon>Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveApply.aspx.cs">
+      <DependentUpon>SlaveApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SlaveApply.aspx.designer.cs">
+      <DependentUpon>SlaveApply.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
