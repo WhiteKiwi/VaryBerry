@@ -22,7 +22,7 @@
 							- 따라서 추천보다는 선배들이 많이 사용한 문제집과 같은 객관적인 사실을 답변해드립니다.<br />
 							- 어디까지나 참고사항으로 여겨주시면 좋겠습니다.</p>
 						<p><strong>4. 질문하기 전 질문하고자 하는 내용이 Berries에 작성되어 있는지 확인해주시기 바랍니다.</strong><br />
-							- 작성되어 있는 팁의 경우 답변의 우선순위가 낮아질 수 있습니다.</p><br />
+							- 작성되어 있는 팁의 경우 답변의 우선순위가 낮아질 수 있습니다.</p>
 						<p><strong>5. 20글자 이상 작성해주세요~</strong></p>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 							<br />
 
 							<!-- Contents -->
-							<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" />
+							<asp:TextBox ID="Contents" runat="server" TextMode="MultiLine" Width="100%" Height="100%" placeholder="20글자 이상 작성해야 등록됩니다." />
 
 							<br />
 							<br />
