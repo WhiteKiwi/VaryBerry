@@ -39,9 +39,9 @@ namespace VaryBerry {
 		protected void AddAnswer(object sender, EventArgs e) {
 			if (Answer.Text.Split("\n".ToCharArray())[0].Contains("안녕하세요 VaryBerry")) {
 				// 답변 추가
-				Models.QaAManager.AddAnswer(new Models.Answer {
+				QaAManager.AddAnswer(new Answer {
 					QuestionId = int.Parse(ID.Value),
-					Contents = Answer.Text.Replace("\r\n", "<br/>")
+					Contents = Answer.Text.Replace("\r\n", "<br/>"),
 				});
 
 				Response.Redirect("/Question.aspx?id=" + ID.Value);
