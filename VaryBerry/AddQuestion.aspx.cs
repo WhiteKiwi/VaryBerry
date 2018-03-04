@@ -20,16 +20,20 @@ namespace VaryBerry {
 		}
 		
 		protected void QuestionUpload(object sender, EventArgs e) {
-			QuestionButton.Enabled = false;
+			if (Contents.Text.Length < 20) {
+				Contents.Text += "20글자 이상 작성해주세요";
+			} else {
+				QuestionButton.Enabled = false;
 
-			// 질문 등록
-			QaAManager.AddQuestion(new Models.Question {
-				Title = nTitle.Text,
-				Contents = Contents.Text,
-				UserID = Request.Cookies["UserID"].Value
-			});
+				// 질문 등록
+				QaAManager.AddQuestion(new Models.Question {
+					Title = nTitle.Text,
+					Contents = Contents.Text,
+					UserID = Request.Cookies["UserID"].Value
+				});
 
-			Response.Redirect("/QaA.aspx");
+				Response.Redirect("/QaA.aspx");
+			}
 		}
 	}
 }

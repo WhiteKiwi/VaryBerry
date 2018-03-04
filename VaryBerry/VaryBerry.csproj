@@ -205,8 +205,8 @@
     <Content Include="images\행사\학술제\학술제 2-5.jpg" />
     <Content Include="images\행사\학술제\학술제 2-6.jpg" />
     <Content Include="images\행사\학술제\학술제.jpg" />
-    <Content Include="master\Navbar-Admin.master" />
     <Content Include="master\Navbar.Master" />
+    <Content Include="master\Navbar-Admin.master" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
