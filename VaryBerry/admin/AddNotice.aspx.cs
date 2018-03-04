@@ -19,8 +19,8 @@ namespace VaryBerry {
 		}
 
 		protected void CountBytes(object sender, EventArgs e) {
-			BytesCount.Text = Encoding.UTF8.GetByteCount(Contents.Text) + " / 10000 Byte";
-			// TODO: Over 10,000 Bytes
+			BytesCount.Text = Encoding.UTF8.GetByteCount(Contents.Text) + " / 5000 Byte";
+			// TODO: Over 5,000 Bytes
 		}
 	}
 }

@@ -46,7 +46,7 @@ namespace VaryBerry {
 				cmd.CommandText = sql;
 
 				// Add Apply Info
-				cmd.Parameters.Add("StudentNumber", MySqlDbType.Int32).Value = studentNumber.Text.Trim();
+				cmd.Parameters.Add("StudentNumber", MySqlDbType.VarChar).Value = studentNumber.Text.Trim();
 				cmd.Parameters.Add("Name", MySqlDbType.VarChar).Value = name.Text.Trim();
 				cmd.Parameters.Add("Index1", MySqlDbType.VarChar).Value = Index1.Text.Trim();
 				cmd.Parameters.Add("Index2", MySqlDbType.VarChar).Value = Index2.Text.Trim();
@@ -79,7 +79,7 @@ namespace VaryBerry {
 			var rdr = cmd.ExecuteReader();
 			while (rdr.Read()) {
 				// 이미 등록된 지원자일 경우
-				if (((int)rdr["StudentNumber"]).ToString() == studentNumber.Text.Trim()) {
+				if (((string)rdr["StudentNumber"]) == studentNumber.Text.Trim()) {
 					ApplyCheck.Text = "이미 지원되셨습니다";
 					ApplyCheck.Enabled = false;
 
