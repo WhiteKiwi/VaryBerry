@@ -314,6 +314,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="managers\BanManager.cs" />
     <Compile Include="master\Navbar-Admin.master.cs">
       <DependentUpon>Navbar-Admin.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

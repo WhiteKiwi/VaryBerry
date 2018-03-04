@@ -232,5 +232,45 @@ namespace VaryBerry.Models {
 				conn.Close();
 			}
 		}
+
+		/// Get Questions by Contents
+		/// 목록 렌더링을 위해 제목과 글번호만 반환
+		/// </summary>
+		public static List<Question> GetQuestionsByContents(int page, string text) {
+			MySqlConnection conn = null;
+			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
+				List<Question> questionList = new List<Question>();
+
+				// Get Questions Count
+				string sql = "SELECT count(*) FROM " + QUESTIONTABLE + " WHERE Contents LIKE '%" + text + "%';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				int questionCount = Convert.ToInt32(cmd.ExecuteScalar());
+
+				// Get Questions
+				sql = "SELECT Id, Title, Question_At FROM " + QUESTIONTABLE + " ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
+				cmd.CommandText = sql;
+
+				var rdr = cmd.ExecuteReader();
+				while (rdr.Read()) {
+					questionList.Add(new Question {
+						Id = (int)rdr["Id"],
+						Title = (string)rdr["Title"],
+						QuestionAt = (DateTime)rdr["Question_At"]
+					});
+				}
+
+				return questionList;
+			} catch (Exception e) {
+				// TODO: 예외 처리
+				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
+			}
+		}
+
 	}
 }

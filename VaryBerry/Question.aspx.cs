@@ -1,14 +1,30 @@
 ﻿using System;
+using VaryBerry.Models;
 
 namespace VaryBerry {
 	public partial class Question : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
+			if (Request.Cookies["UserID"] == null) {
+				// Cookie가 없을 경우 발급
+				var rand = new Random(DateTime.Now.Millisecond);
+				Response.Cookies["UserID"].Value = rand.Next().ToString() + "/" + rand.Next().ToString();
+				Response.Cookies["UserID"].Expires = DateTime.Now.AddYears(5);
+			} else {
+				// 밴 리스트 검사 후 차단
+				if (BanManager.IsBan(Request.Cookies["UserID"].Value)) {
+					Response.Redirect("/");
+
+					return;
+				}
+			}
+
+			// GET Question ID
 			var questionID = Request.QueryString["id"];
 			ID.Value = Request.QueryString["id"];
 
 			// questionId가 존재할 경우
 			if (!String.IsNullOrEmpty(questionID)) {
-				var question = Models.QaAManager.GetQuestionByID(int.Parse(questionID));
+				var question = QaAManager.GetQuestionByID(int.Parse(questionID));
 
 				nTitle.Text = question.Title;
 				Contents.Text = question.Contents;
