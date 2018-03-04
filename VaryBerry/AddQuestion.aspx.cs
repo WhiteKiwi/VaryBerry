@@ -20,9 +20,7 @@ namespace VaryBerry {
 		}
 		
 		protected void QuestionUpload(object sender, EventArgs e) {
-			if (Contents.Text.Length < 20) {
-				Contents.Text += "20글자 이상 작성해주세요";
-			} else {
+			if (Contents.Text.Length >= 20) {
 				QuestionButton.Enabled = false;
 
 				// 질문 등록
