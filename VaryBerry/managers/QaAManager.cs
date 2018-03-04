@@ -25,13 +25,14 @@ namespace VaryBerry.Models {
 				int result = 0;
 
 				// Connect to Database
-				string sql = "INSERT INTO " + QUESTIONTABLE + "(Title, Contents, Question_At) VALUES (?, ?, ?);";
+				string sql = "INSERT INTO " + QUESTIONTABLE + "(Title, Contents, Question_At, UserID) VALUES (?, ?, ?, ?);";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// Add Question Info
 				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = question.Title;
 				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = question.Contents.Replace("\r\n", "<br/>");
 				cmd.Parameters.Add("Question_At", MySqlDbType.DateTime).Value = DateTime.Now;
+				cmd.Parameters.Add("UserID", MySqlDbType.VarChar).Value = question.UserID;
 
 				result = cmd.ExecuteNonQuery();
 
