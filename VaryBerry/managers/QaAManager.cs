@@ -234,10 +234,10 @@ namespace VaryBerry.Models {
 			}
 		}
 
-		/// Get Questions by Contents
+		/// Get Questions by Searching
 		/// 목록 렌더링을 위해 제목과 글번호만 반환
 		/// </summary>
-		public static List<Question> GetQuestionsByContents(int page, string text) {
+		public static List<Question> GetQuestionsBySearching(int page, string text, bool isContents) {
 			MySqlConnection conn = null;
 			try {
 				// Connect to DB;
@@ -246,13 +246,20 @@ namespace VaryBerry.Models {
 
 				List<Question> questionList = new List<Question>();
 
+				// SetColumName
+				string columName = "";
+				if (isContents)
+					columName = "Contents";
+				else
+					columName = "Title";
+
 				// Get Questions Count
-				string sql = "SELECT count(*) FROM " + QUESTIONTABLE + " WHERE Contents LIKE '%" + text + "%';";
+				string sql = "SELECT count(*) FROM " + QUESTIONTABLE + " WHERE " + columName + " LIKE '%" + text + "%';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				int questionCount = Convert.ToInt32(cmd.ExecuteScalar());
 
 				// Get Questions
-				sql = "SELECT Id, Title, Question_At FROM " + QUESTIONTABLE + " ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
+				sql = "SELECT Id, Title, Question_At FROM " + QUESTIONTABLE + " WHERE " + columName + " LIKE '%" + text + "%' ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
 				cmd.CommandText = sql;
 
 				var rdr = cmd.ExecuteReader();
@@ -272,6 +279,5 @@ namespace VaryBerry.Models {
 				conn.Close();
 			}
 		}
-
 	}
 }
