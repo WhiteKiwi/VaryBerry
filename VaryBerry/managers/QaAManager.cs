@@ -234,6 +234,42 @@ namespace VaryBerry.Models {
 			}
 		}
 
+		/// <summary>
+		/// Get Pages Count
+		/// </summary>
+		public static int GetPagesCountBySearching(string text, bool isContents) {
+			MySqlConnection conn = null;
+			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
+				// SetColumName
+				string columName = "";
+				if (isContents)
+					columName = "Contents";
+				else
+					columName = "Title";
+
+				// Get Questions Count
+				string sql = "SELECT count(*) FROM " + QUESTIONTABLE + " WHERE " + columName + " LIKE '%" + text + "%';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				int questionCount = Convert.ToInt32(cmd.ExecuteScalar());
+
+				// 공지 갯수의 1의 자리가 0일 경우
+				if (questionCount % 10 != 0) {
+					return questionCount / 10 + 1;
+				} else {
+					return questionCount / 10;
+				}
+			} catch (Exception e) {
+				// TODO: 예외 처리
+				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
+			}
+		}
+		
 		/// Get Questions by Searching
 		/// 목록 렌더링을 위해 제목과 글번호만 반환
 		/// </summary>
