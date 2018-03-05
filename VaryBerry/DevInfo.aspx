@@ -15,20 +15,18 @@
 		<table style="width: 100%; height: 100%; text-align: center">
 			<thead>
 				<tr>
-					<th style="width: 20%; color: red">Director</th>
-					<th style="width: 20%; color: mediumpurple">Designer</th>
-					<th style="width: 20%; color: blue">Developer</th>
-					<th style="width: 20%; color: blue">Developer</th>
-					<th style="width: 20%; color: burlywood">Photographer</th>
+					<th style="width: 25%; color: red">Director</th>
+					<th style="width: 25%; color: blue">Developer</th>
+					<th style="width: 25%; color: mediumpurple">Designer</th>
+					<th style="width: 25%; color: mediumpurple">Designer</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th style="width: 20%;">4기 장지훈</th>
-					<th style="width: 20%;">3기 김도연</th>
-					<th style="width: 20%;">4기 김재훈</th>
-					<th style="width: 20%;">3기 가동식</th>
-					<th style="width: 20%;">3기 전민규</th>
+					<th style="width: 25%;">4기 장지훈</th>
+					<th style="width: 25%;">4기 김재훈</th>
+					<th style="width: 25%;">3기 김도연</th>
+					<th style="width: 25%;">4기 최소정</th>
 				</tr>
 			</tbody>
 		</table>
@@ -41,18 +39,14 @@
 				<tr>
 					<th style="width: 20%; color: gray">Guide Director</th>
 					<th style="width: 20%; color: gray">Guide Codirector</th>
-					<th style="width: 20%; color: gray">Guide Codirector</th>
-					<th style="width: 20%; color: gray">Guide Codirector</th>
-					<th style="width: 20%; color: gray">Guide Codirector</th>
+					<th style="width: 20%; color: burlywood">Photographer</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th style="width: 20%;">3기 김영훈</th>
-					<th style="width: 20%;">4기 강범석</th>
-					<th style="width: 20%;">4기 이주원</th>
-					<th style="width: 20%;">4기 공민선</th>
-					<th style="width: 20%;">4기 임채림</th>
+					<th style="width: 33%;">3기 김영훈</th>
+					<th style="width: 33%;">4기 임채림</th>
+					<th style="width: 33%;">3기 전민규</th>
 				</tr>
 			</tbody>
 			<tfoot>
