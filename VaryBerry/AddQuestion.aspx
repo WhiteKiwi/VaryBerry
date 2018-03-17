@@ -56,6 +56,7 @@
 			</div>
 		</div>
 	</div>
+
 	<footer style="width: 100%; margin-top: 1.5em; margin-bottom: 1.5em; text-align: center;">
 		<a href="/DevInfo.aspx" style="color: #C9C9C9;">
 			<h6>2017 Copyright © Team VaryBerry All Right Reserved.</h6>
