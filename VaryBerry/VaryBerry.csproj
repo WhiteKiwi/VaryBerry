@@ -79,6 +79,7 @@
     <Content Include="admin\AddBerry.aspx" />
     <Content Include="admin\AddEvent.aspx" />
     <Content Include="admin\AddNotice.aspx" />
+    <Content Include="admin\Ban.aspx" />
     <Content Include="admin\BerryProposals.aspx" />
     <Content Include="admin\Views.aspx" />
     <Content Include="Apply.aspx" />
@@ -257,6 +258,13 @@
     </Compile>
     <Compile Include="admin\AddNotice.aspx.designer.cs">
       <DependentUpon>AddNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Ban.aspx.cs">
+      <DependentUpon>Ban.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Ban.aspx.designer.cs">
+      <DependentUpon>Ban.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\BerryProposals.aspx.cs">
       <DependentUpon>BerryProposals.aspx</DependentUpon>

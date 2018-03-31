@@ -27,6 +27,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="/admin/Views.aspx">Berry 조회수</a>
 				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/admin/Ban.aspx">Ban</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
