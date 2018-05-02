@@ -7,26 +7,22 @@
 	<div style="padding-top: 50px; margin-bottom: 150px; padding-left: 100px; padding-right: 100px; text-align: left;">
 		<h3><strong>VaryBerry 지원</strong></h3>
 		<hr class="hr-sky" />
-		<form runat="server" style="height: 100%;">
-			<div style="float: left; margin-left: 50px; margin-right: 30px;">
-				<div class="float-left" style="margin-right: 20px;"><h5>학번</h5></div>
-				<span class="float-left" style="margin-right: 20px;" ><asp:TextBox ID="studentNumber" runat="server" /></span>
-				<span class="float-left"><asp:Button ID="ApplyCheck" runat="server" OnClick="ApplyCheck_Click" Text="지원 여부 확인" CssClass="btn btn-primary" /></span>
+		<form runat="server" style="height: 100%; text-align: center;">
+			<div style="margin-left: 50px; margin-right: 30px;">
+				<div class="float-left" style="margin-right: 20px;">
+					<h5>학번</h5>
+				</div>
+				<span class="float-left" style="margin-right: 20px;">
+					<asp:TextBox ID="studentNumber" runat="server" /></span>
 				<br />
 				<br />
 				<br />
-				<div class="float-left" style="margin-right: 20px;"><h5>디자이너/개발자/사진</h5></div>
-				<span class="float-left"><asp:TextBox ID="role" runat="server" placeholder="ex: 개발자" /></span>
+
+				<h5 style="float: left; margin-bottom: 15px;">
+					<asp:Label runat="server" ID="Question"></asp:Label> (최대 5000 Bytes)</h5>
+				<asp:TextBox ID="Answer" runat="server" TextMode="MultiLine" Width="100%" Rows="20" />
 				<br />
-				<br />
-				<br />
-				<h5 style="margin-bottom: 15px;">Q1. VaryBerry가 본인에게 어떤 도움이 될 것이라고 생각하시나요?</h5>
-				<asp:TextBox ID="Contents1" runat="server" TextMode="MultiLine" Width="100%" Rows="10" />
-				<br />
-				<br />
-				<br />
-				<h5 style="margin-bottom: 15px;">Q2. 시험기간에 부르면 어떻게 하실 건가요?</h5>
-				<asp:TextBox ID="Contents2" runat="server" TextMode="MultiLine" Width="100%" Rows="10" placeholder="ps. 그렇다고 시험기간에 모인다는 것은 아닙니다.&#10;바쁜 시기에 부르면 어떻게 대처하실지에 대한 질문입니다." />
+				<p>서류 질문은 총 4개로 9일에 걸쳐 평가가 진행됩니다. <br /> 2일마다 질문이 바뀌므로 한 질문에 답변하셨더라도 다음에 이어질 새로운 질문에 또 답변하셔야 합니다. <br /> 이점 유의해주시고 공지사항을 읽지 않으셨다면 불이익을 받지 않기 위해서 꼭 필독하시기 바랍니다!</p>
 				<br />
 				<br />
 				<asp:Button ID="UploadButton" runat="server" CssClass="btn btn-primary float-right" OnClick="ApplyUpload" Text="등록" />
