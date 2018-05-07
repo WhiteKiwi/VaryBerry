@@ -22,22 +22,40 @@ namespace VaryBerry {
         protected global::System.Web.UI.WebControls.TextBox studentNumber;
         
         /// <summary>
-        /// Question 컨트롤입니다.
+        /// CheckButton 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Question;
+        protected global::System.Web.UI.WebControls.Button CheckButton;
         
         /// <summary>
-        /// Answer 컨트롤입니다.
+        /// Answer0 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Answer;
+        protected global::System.Web.UI.WebControls.TextBox Answer0;
+        
+        /// <summary>
+        /// Answer1 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Answer1;
+        
+        /// <summary>
+        /// Answer2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Answer2;
         
         /// <summary>
         /// UploadButton 컨트롤입니다.

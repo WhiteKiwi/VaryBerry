@@ -4,6 +4,7 @@ using VaryBerry.Models;
 namespace VaryBerry {
 	public partial class QaA : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
+			/*
 			#region 주말면학 차단
 			// 주말 면학시간 차단
 			DateTime now = DateTime.Now.AddHours(9);
@@ -38,11 +39,7 @@ namespace VaryBerry {
 					Response.Redirect("/Notice.aspx?id=34");
 			}
 			#endregion
-
-			// 분류 목록 추가
-			titleOrContents.Items.Add("제목");
-			titleOrContents.Items.Add("내용");
-
+			*/
 			if (Request.Cookies["UserID"] == null) {
 				// Cookie가 없을 경우 발급
 				var rand = new Random(DateTime.Now.Millisecond);
@@ -56,6 +53,9 @@ namespace VaryBerry {
 					return;
 				}
 			}
+			// 분류 목록 추가
+			titleOrContents.Items.Add("제목");
+			titleOrContents.Items.Add("내용");
 		}
 
 		protected void Searching(object sender, EventArgs e) {
