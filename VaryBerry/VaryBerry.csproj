@@ -85,6 +85,7 @@
     <Content Include="Apply.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\img\CNSA_Life.jpg" />
+    <Content Include="assets\img\Comming-Soon.png" />
     <Content Include="assets\img\Event.jpg" />
     <Content Include="assets\img\Facilities.jpg" />
     <Content Include="assets\img\Organization.jpg" />

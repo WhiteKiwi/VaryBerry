@@ -32,8 +32,11 @@
 				<span style="float: right; margin-right: 37px;">게시일</span>
 			</div>
 			<hr class="hr-sky" />
+            <div style="width: 100%; text-align: center;">
+                <img src="/assets/img/Comming-Soon.png" />
+            </div>
 			<!-- Table Data -->
-			<%
+			<%/*
 				try {
 					int rPage;
 					try {
@@ -74,11 +77,12 @@
 					}
 				} catch (Exception e) {
 					Response.Write(e.Message);
-				}
+				}*/
 			%>
-			<div style="width: 100%; text-align: right;">
+
+            <!--<div style="width: 100%; text-align: right;">
 				<a href="/AddQuestion.aspx" class="btn btn-primary" role="button">질문 등록</a>
-			</div>
+			</div>-->
 
 			<!-- Page Link -->
 			<div class="text-center">
@@ -87,7 +91,7 @@
 						<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
 					</b></strong>
 				</span>
-				<%
+				<%/*
 					string queryText = "";
 					int page = 1;
 					int pageCount = 10;
@@ -178,7 +182,7 @@
 							Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + i + queryText + "\">" + i + "</a>");
 							Response.Write("</span>");
 						}
-					}
+					}*/
 				%>
 				<span>
 					<strong><b>
