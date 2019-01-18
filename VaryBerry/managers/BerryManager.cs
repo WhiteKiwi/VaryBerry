@@ -185,7 +185,7 @@ namespace VaryBerry.Models {
 					Title = (string)rdr["Title"],
 					Contents = (string)rdr["Contents"]
 				};
-				
+
 				// 조회수 증가
 				sql = "UPDATE " + BERRYTABLE + " SET Views='" + ((int)rdr["Views"] + 1) + "' WHERE Id='" + id + "';";
 				rdr.Close();
@@ -193,6 +193,27 @@ namespace VaryBerry.Models {
 				cmd.ExecuteNonQuery();
 
 				return result;
+			} catch (Exception e) {
+				// TODO: 예외 처리
+				throw new Exception(e.Message);
+			} finally {
+				conn.Close();
+			}
+		}
+
+		/// <summary>
+		/// Edit Berry by Id
+		/// </summary>
+		public static void EditBerry(int id, string contents) {
+			MySqlConnection conn = null;
+			try {
+				// Connect to DB;
+				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
+				conn.Open();
+
+				string sql = "UPDATE berries SET Contents='" + contents + "' WHERE Id='" + id + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				cmd.ExecuteNonQuery();
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);

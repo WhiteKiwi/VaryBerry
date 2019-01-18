@@ -32,11 +32,11 @@
 				<span style="float: right; margin-right: 37px;">게시일</span>
 			</div>
 			<hr class="hr-sky" />
-            <div style="width: 100%; text-align: center;">
+           <%-- <div style="width: 100%; text-align: center;">
                 <img src="/assets/img/Comming-Soon.png" />
-            </div>
+            </div>--%>
 			<!-- Table Data -->
-			<%/*
+			<%
 				try {
 					int rPage;
 					try {
@@ -77,12 +77,12 @@
 					}
 				} catch (Exception e) {
 					Response.Write(e.Message);
-				}*/
+				}
 			%>
 
-            <!--<div style="width: 100%; text-align: right;">
+            <div style="width: 100%; text-align: right;">
 				<a href="/AddQuestion.aspx" class="btn btn-primary" role="button">질문 등록</a>
-			</div>-->
+			</div>
 
 			<!-- Page Link -->
 			<div class="text-center">
@@ -91,98 +91,98 @@
 						<asp:LinkButton runat="server" OnClick="LeftButton_Click" Text="<" ForeColor="#509BF8" />
 					</b></strong>
 				</span>
-				<%/*
-					string queryText = "";
-					int page = 1;
-					int pageCount = 10;
-					if (Request.QueryString["titleSearch"] != null) {
-						pageCount = VaryBerry.Models.QaAManager.GetPagesCountBySearching(Request.QueryString["titleSearch"], false);
-						try {
-							page = int.Parse(Request.QueryString["page"]);
-						} catch (Exception e) {
-							page = 1;
-						}
+				<%
+                    string queryText = "";
+                    int page = 1;
+                    int pageCount = 10;
+                    if (Request.QueryString["titleSearch"] != null) {
+                        pageCount = VaryBerry.Models.QaAManager.GetPagesCountBySearching(Request.QueryString["titleSearch"], false);
+                        try {
+                            page = int.Parse(Request.QueryString["page"]);
+                        } catch (Exception e) {
+                            page = 1;
+                        }
 
-						queryText = "&titleSearch=" + Request.QueryString["titleSearch"];
-					} else if (Request.QueryString["contentsSearch"] != null) {
-						pageCount = VaryBerry.Models.QaAManager.GetPagesCountBySearching(Request.QueryString["contentsSearch"], true);
-						try {
-							page = int.Parse(Request.QueryString["page"]);
-						} catch (Exception e) {
-							page = 1;
-						}
+                        queryText = "&titleSearch=" + Request.QueryString["titleSearch"];
+                    } else if (Request.QueryString["contentsSearch"] != null) {
+                        pageCount = VaryBerry.Models.QaAManager.GetPagesCountBySearching(Request.QueryString["contentsSearch"], true);
+                        try {
+                            page = int.Parse(Request.QueryString["page"]);
+                        } catch (Exception e) {
+                            page = 1;
+                        }
 
-						queryText = "&contentsSearch=" + Request.QueryString["contentsSearch"];
-					} else {
-						pageCount = VaryBerry.Models.QaAManager.GetPagesCount();
-						try {
-							page = int.Parse(Request.QueryString["page"]);
-						} catch (Exception e) {
-							page = 1;
-						}
-					}
+                        queryText = "&contentsSearch=" + Request.QueryString["contentsSearch"];
+                    } else {
+                        pageCount = VaryBerry.Models.QaAManager.GetPagesCount();
+                        try {
+                            page = int.Parse(Request.QueryString["page"]);
+                        } catch (Exception e) {
+                            page = 1;
+                        }
+                    }
 
-					// 정상적인 페이지 요청일 경우
-					if (page <= pageCount) {
-						// 요청한 페이지가 마지막 장일경우
-						if (pageCount / 10 == page / 10) {
-							if (page % 10 != 0) {
-								for (int i = 1; i <= pageCount % 10; i++) {
-									string pageStyle = "";
-									string textStyle = "";
-									if (i + ((page / 10) * 10) == page) {
-										pageStyle = " class=\"this-page\"";
-										textStyle = " style=\"color: white;\"";
-									}
+                    // 정상적인 페이지 요청일 경우
+                    if (page <= pageCount) {
+                        // 요청한 페이지가 마지막 장일경우
+                        if (pageCount / 10 == page / 10) {
+                            if (page % 10 != 0) {
+                                for (int i = 1; i <= pageCount % 10; i++) {
+                                    string pageStyle = "";
+                                    string textStyle = "";
+                                    if (i + ((page / 10) * 10) == page) {
+                                        pageStyle = " class=\"this-page\"";
+                                        textStyle = " style=\"color: white;\"";
+                                    }
 
-									Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
-									Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + ((page / 10) * 10)) + queryText + "\">" + (i + ((page / 10) * 10)) + "</a>");
-									Response.Write("</span>");
-								}
-							} else {
-								// 마지막 페이지의 일의 자릿 수가 0일 경우
-								for (int i = 1; i <= 10; i++) {
-									string pageStyle = "";
-									string textStyle = "";
-									if (i + page - 10 == page) {
-										pageStyle = " class=\"this-page\"";
-										textStyle = " style=\"color: white;\"";
-									}
+                                    Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+                                    Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + ((page / 10) * 10)) + queryText + "\">" + (i + ((page / 10) * 10)) + "</a>");
+                                    Response.Write("</span>");
+                                }
+                            } else {
+                                // 마지막 페이지의 일의 자릿 수가 0일 경우
+                                for (int i = 1; i <= 10; i++) {
+                                    string pageStyle = "";
+                                    string textStyle = "";
+                                    if (i + page - 10 == page) {
+                                        pageStyle = " class=\"this-page\"";
+                                        textStyle = " style=\"color: white;\"";
+                                    }
 
-									Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
-									Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + page - 10) + queryText + "\">" + (i + page - 10) + "</a>");
-									Response.Write("</span>");
-								}
-							}
-						} else {
-							for (int i = 1; i <= 10; i++) {
-								string pageStyle = "";
-								string textStyle = "";
-								if (i + ((page / 10) * 10) == page) {
-									pageStyle = " class=\"this-page\"";
-									textStyle = " style=\"color: white;\"";
-								}
+                                    Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+                                    Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + page - 10) + queryText + "\">" + (i + page - 10) + "</a>");
+                                    Response.Write("</span>");
+                                }
+                            }
+                        } else {
+                            for (int i = 1; i <= 10; i++) {
+                                string pageStyle = "";
+                                string textStyle = "";
+                                if (i + ((page / 10) * 10) == page) {
+                                    pageStyle = " class=\"this-page\"";
+                                    textStyle = " style=\"color: white;\"";
+                                }
 
-								Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
-								Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + ((page / 10) * 10)) + queryText + "\">" + (i + ((page / 10) * 10)) + "</a>");
-								Response.Write("</span>");
-							}
-						}
-					} else {
-						// 첫 목록
-						for (int i = 1; i <= 10; i++) {
-							string pageStyle = "";
-							string textStyle = "";
-							if (i == 1) {
-								pageStyle = " class=\"this-page\"";
-								textStyle = " style=\"color: white;\"";
-							}
+                                Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+                                Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + (i + ((page / 10) * 10)) + queryText + "\">" + (i + ((page / 10) * 10)) + "</a>");
+                                Response.Write("</span>");
+                            }
+                        }
+                    } else {
+                        // 첫 목록
+                        for (int i = 1; i <= 10; i++) {
+                            string pageStyle = "";
+                            string textStyle = "";
+                            if (i == 1) {
+                                pageStyle = " class=\"this-page\"";
+                                textStyle = " style=\"color: white;\"";
+                            }
 
-							Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
-							Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + i + queryText + "\">" + i + "</a>");
-							Response.Write("</span>");
-						}
-					}*/
+                            Response.Write("<span" + pageStyle + " style=\"padding: 3px 9px; margin: 3px;\">");
+                            Response.Write("<a" + textStyle + " href=\"/QaA.aspx?page=" + i + queryText + "\">" + i + "</a>");
+                            Response.Write("</span>");
+                        }
+                    }
 				%>
 				<span>
 					<strong><b>

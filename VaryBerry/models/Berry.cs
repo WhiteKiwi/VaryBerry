@@ -1,6 +1,4 @@
-﻿using VaryBerry.Models;
-
-namespace VaryBerry.Models {
+﻿namespace VaryBerry.Models {
 	/// <summary>
 	/// Berries Model
 	/// </summary>

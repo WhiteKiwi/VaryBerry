@@ -81,6 +81,7 @@
     <Content Include="admin\AddNotice.aspx" />
     <Content Include="admin\Ban.aspx" />
     <Content Include="admin\BerryProposals.aspx" />
+    <Content Include="admin\Edit.aspx" />
     <Content Include="admin\Views.aspx" />
     <Content Include="Apply.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
@@ -163,6 +164,9 @@
     <Content Include="images\시설\인재관\인재관 2-2-6-2.jpg" />
     <Content Include="images\시설\인재관\인재관 2-3.jpg" />
     <Content Include="images\시설\인재관\인재관 2-2.jpg" />
+    <Content Include="images\시설\인재관\인재관 8-1.jpg" />
+    <Content Include="images\시설\충무관\충무관 2-1.png" />
+    <Content Include="images\시설\충무관\충무관 2-2.png" />
     <Content Include="images\학습\모의고사\모의고사시간표 2-1.png" />
     <Content Include="images\학습\블록수업\블록수업 1-1.png" />
     <Content Include="images\행사\CNSA Concert\CNSA Concert 1-1.jpg" />
@@ -297,6 +301,13 @@
     </Compile>
     <Compile Include="admin\BerryProposals.aspx.designer.cs">
       <DependentUpon>BerryProposals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Views.aspx.cs">
       <DependentUpon>Views.aspx</DependentUpon>

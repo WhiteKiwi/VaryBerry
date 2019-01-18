@@ -11,10 +11,10 @@
 		<div style="width: 100%; padding-top: 50px; padding-left: 100px; padding-right: 100px; text-align: left;">
 			<h3><strong>일정</strong></h3>
 			<hr class="hr-sky" />
-            <div style="width: 100%; text-align: center;">
+            <%--<div style="width: 100%; text-align: center;">
                 <img src="/assets/img/Comming-Soon.png" />
-            </div>
-			<%/*
+            </div>--%>
+			<%
 				try {
 					var calendarList = VaryBerry.Models.CalendarManager.GetCalendars();
 
@@ -27,7 +27,7 @@
 					}
 				} catch (Exception e) {
 					Response.Write(e.Message);
-				}*/
+				}
 			%>
 		</div>
 	</div>
