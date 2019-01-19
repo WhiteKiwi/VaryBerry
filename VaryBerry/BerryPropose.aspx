@@ -19,10 +19,10 @@
 					<a class="nav-link" href="/Berries.aspx?classification=2"><strong>CNSA 용어</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=3"><strong>생활</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=3"><strong>생활/학습</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
-					<a class="nav-link" href="/Berries.aspx?classification=4"><strong>학습</strong></a>
+					<a class="nav-link" href="/Berries.aspx?classification=4"><strong>인재관</strong></a>
 				</li>
 				<li class="nav-item active" style="margin-left: 10px; margin-right: 10px;">
 					<a class="nav-link" href="/Berries.aspx?classification=5"><strong>동아리</strong></a>

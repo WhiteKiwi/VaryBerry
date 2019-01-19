@@ -42,11 +42,11 @@
 								case VaryBerry.Models.Classification.CNSATerms:
 									Response.Write(proposal.Title + " - CNSA 용어");
 									break;
-								case VaryBerry.Models.Classification.CNSALife:
-									Response.Write(proposal.Title + " - 생활");
+								case VaryBerry.Models.Classification.CNSALifeAndStudy:
+									Response.Write(proposal.Title + " - 생활/학습");
 									break;
-								case VaryBerry.Models.Classification.Study:
-									Response.Write(proposal.Title + " - 학습");
+								case VaryBerry.Models.Classification.Dormitory:
+									Response.Write(proposal.Title + " - 인재관");
 									break;
 								case VaryBerry.Models.Classification.Club:
 									Response.Write(proposal.Title + " - 동아리");

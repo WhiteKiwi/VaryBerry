@@ -16,8 +16,8 @@ namespace VaryBerry {
 			ClassificationList.Items.Add("행사");
 			ClassificationList.Items.Add("학교시설");
 			ClassificationList.Items.Add("CNSA 용어");
-			ClassificationList.Items.Add("생활");
-			ClassificationList.Items.Add("학습");
+			ClassificationList.Items.Add("생활/학습");
+			ClassificationList.Items.Add("인재관");
 			ClassificationList.Items.Add("동아리");
 			ClassificationList.Items.Add("단체");
 			ClassificationList.Items.Add("대회");
@@ -36,11 +36,11 @@ namespace VaryBerry {
 				case "CNSA 용어":
 					classification = Models.Classification.CNSATerms;
 					break;
-				case "생활":
-					classification = Models.Classification.CNSALife;
+				case "생활/학습":
+					classification = Models.Classification.CNSALifeAndStudy;
 					break;
-				case "학습":
-					classification = Models.Classification.Study;
+				case "인재관":
+					classification = Models.Classification.Dormitory;
 					break;
 				case "동아리":
 					classification = Models.Classification.Club;

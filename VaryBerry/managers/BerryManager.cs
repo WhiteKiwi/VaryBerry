@@ -38,10 +38,10 @@ namespace VaryBerry.Models {
 					case Classification.CNSATerms:
 						classificationIndex = 2;
 						break;
-					case Classification.CNSALife:
+					case Classification.CNSALifeAndStudy:
 						classificationIndex = 3;
 						break;
-					case Classification.Study:
+					case Classification.Dormitory:
 						classificationIndex = 4;
 						break;
 					case Classification.Club:
@@ -124,10 +124,10 @@ namespace VaryBerry.Models {
 					case Classification.CNSATerms:
 						classificationIndex = 2;
 						break;
-					case Classification.CNSALife:
+					case Classification.CNSALifeAndStudy:
 						classificationIndex = 3;
 						break;
-					case Classification.Study:
+					case Classification.Dormitory:
 						classificationIndex = 4;
 						break;
 					case Classification.Club:

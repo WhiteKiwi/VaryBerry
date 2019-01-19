@@ -13,10 +13,10 @@
 		CNSATerms,
 
 		// 생활
-		CNSALife,
+		CNSALifeAndStudy,
 
 		// 학습
-		Study,
+		Dormitory,
 
 		// 동아리
 		Club,
