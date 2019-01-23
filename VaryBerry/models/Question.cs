@@ -14,5 +14,7 @@ namespace VaryBerry.Models {
 		public DateTime QuestionAt { get; set; }  // 질문 날짜
 
 		public string UserID { get; set; }	// 등록자 ID
+
+		public string Answer { get; set; }	// 답변 내용
 	}
 }

@@ -25,7 +25,7 @@ namespace VaryBerry.Models {
 				int result = 0;
 
 				// Connect to Database
-				string sql = "INSERT INTO " + QUESTIONTABLE + "(Title, Contents, Question_At, UserID) VALUES (?, ?, ?, ?);";
+				string sql = "INSERT INTO " + QUESTIONTABLE + "(Title, Contents, Question_At, UserID, RandText) VALUES (?, ?, ?, ?, ?);";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// Add Question Info
@@ -33,6 +33,7 @@ namespace VaryBerry.Models {
 				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = question.Contents.Replace("\r\n", "<br/>");
 				cmd.Parameters.Add("Question_At", MySqlDbType.DateTime).Value = DateTime.Now;
 				cmd.Parameters.Add("UserID", MySqlDbType.VarChar).Value = question.UserID;
+				cmd.Parameters.Add("RandText", MySqlDbType.VarChar).Value = "12345678";
 
 				result = cmd.ExecuteNonQuery();
 
@@ -64,7 +65,7 @@ namespace VaryBerry.Models {
 				int questionCount = Convert.ToInt32(cmd.ExecuteScalar());
 
 				// Get Questions
-				sql = "SELECT Id, Title, Question_At FROM " + QUESTIONTABLE + " ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
+				sql = "SELECT Id, Title, Question_At, Answer FROM " + QUESTIONTABLE + " ORDER BY Id DESC LIMIT 10 OFFSET " + ((page - 1) * 10) + ";";
 				cmd.CommandText = sql;
 
 				var rdr = cmd.ExecuteReader();
@@ -72,7 +73,8 @@ namespace VaryBerry.Models {
 					questionList.Add(new Question {
 						Id = (int)rdr["Id"],
 						Title = (string)rdr["Title"],
-						QuestionAt = (DateTime)rdr["Question_At"]
+						QuestionAt = (DateTime)rdr["Question_At"],
+						Answer = (string)rdr["Answer"]
 					});
 				}
 
@@ -131,36 +133,12 @@ namespace VaryBerry.Models {
 				conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["VaryBerry"].ConnectionString);
 				conn.Open();
 
-				int result = 0;
-
-				// Connect to Database
-				string sql = "SELECT count(*) FROM " + ANSWERTABLE + " WHERE Question_Id='" + answer.QuestionId + "';";
+				string sql = "UPDATE questions SET Answer='" + answer.Contents + "' WHERE Id='" + answer.QuestionId + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-				// 답변이 하나도 없을 경우
-				int answerCount = Convert.ToInt32(cmd.ExecuteScalar());
-				if (answerCount == 0) {
-					// 제목 불러오기
-					sql = "SELECT Title FROM questions WHERE Id='" + answer.QuestionId + "';";
-					cmd.CommandText = sql;
-					string title = cmd.ExecuteScalar().ToString();
+				cmd.ExecuteNonQuery();
 
-					// 답변완료 추가해서 제목 저장
-					sql = "UPDATE questions SET Title='<span style=\"font-size: 0.9rem; \">[답변완료]</span> " + title + "' WHERE Id='" + answer.QuestionId + "';";
-					cmd.CommandText = sql;
-					cmd.ExecuteNonQuery();
-				}
-
-				sql = "INSERT INTO " + ANSWERTABLE + "(Question_Id, Contents) VALUES (?, ?);";
-				cmd.CommandText = sql;
-
-				// Add Answer Info
-				cmd.Parameters.Add("Question_Id", MySqlDbType.Int64).Value = answer.QuestionId;
-				cmd.Parameters.Add("Contents", MySqlDbType.VarChar).Value = answer.Contents;
-
-				result = cmd.ExecuteNonQuery();
-
-				return result;
+				return 0;
 			} catch (Exception e) {
 				// TODO: 예외 처리
 				throw new Exception(e.Message);
@@ -182,18 +160,19 @@ namespace VaryBerry.Models {
 
 				List<Answer> answerList = new List<Answer>();
 
-				string sql = "SELECT * FROM " + ANSWERTABLE + " WHERE Question_Id='" + id + "';";
+				string sql = "SELECT * FROM " + QUESTIONTABLE + " WHERE Id='" + id + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				// TODO: Answer가 없을 경우
-
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {
-					answerList.Add(new Answer {
-						Id = (int)rdr["Id"],
-						QuestionId = (int)rdr["Question_Id"],
-						Contents = (string)rdr["Contents"]
-					});
+					if ((string)rdr["Answer"] != "0") {
+						answerList.Add(new Answer {
+							Id = (int)rdr["Id"],
+							QuestionId = (int)rdr["Id"],
+							Contents = (string)rdr["Answer"]
+						});
+					}
 				}
 
 				return answerList;
@@ -269,7 +248,7 @@ namespace VaryBerry.Models {
 				conn.Close();
 			}
 		}
-		
+
 		/// Get Questions by Searching
 		/// 목록 렌더링을 위해 제목과 글번호만 반환
 		/// </summary>
